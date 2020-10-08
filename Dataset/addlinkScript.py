@@ -19,7 +19,7 @@ for filename in os.listdir(inputDirectory) :
 
     outputFile = ""
   
-    currentProbability = 0.3
+    currentProbability = 0.05
     while currentLine:
         currentLine = content.readline()
 
@@ -28,7 +28,7 @@ for filename in os.listdir(inputDirectory) :
             insertPosition = possibleIndexes[random.randint(0,len(possibleIndexes)-1)]
             fileLink = filename
             while(fileLink == filename):
-                fileLink = "site"+str(random.randint(1,len(os.listdir(inputDirectory))))+".txt"
+                fileLink = "site"+str(random.randint(1,len(os.listdir(inputDirectory))))+".txt "
 
             fileLink = " linkTo:"+fileLink
             if insertPosition == len(currentLine):

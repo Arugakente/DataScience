@@ -1,0 +1,87 @@
+
+
+Sommaire
+1	Histoire
+1.1	OpenGL 1.5
+1.2	OpenGL 2.0
+1.3	OpenGL ES
+1.4	OpenGL 3.0
+1.5	OpenGL 3.1
+1.6	OpenGL 3.2
+1.7	OpenGL 3.3
+1.8	OpenGL 4.0
+1.9	Vulkan
+2	Extensions
+3	Bibliothèques
+4	Exemple simple de programme OpenGL
+5	Implémentations
+6	Intérêt d'OpenGL pour Silicon Graphics
+7	Utilisations
+8	Critiques
+9	Notes et références
+10	Voir aussi
+10.1	Articles connexes
+10.2	Bibliographie
+10.3	Spécifications
+10.4	Liens externes
+Histoire
+OpenGL est une évolution d'IrisGL, API 3D développée par Silicon Graphics (SGI). Cette dernière étant difficile à faire évoluer et à étendre, il a été décidé chez Silicon Graphics qu'OpenGL pouvait être assimilé à un sur-ensemble d'IrisGL. Les spécifications et développements de base ont été réalisés par une équipe de Silicon Graphics. Le projet Fahrenheit, initiative de Microsoft et de Silicon Graphics, tenta d'unifier les interfaces OpenGL et Direct3D. Celui-ci apporta au début l'espoir de mettre de l'ordre dans le monde des API 3D, mais pour des contraintes financières de la part de Silicon Graphics, le projet dut être abandonné.
+
+La spécification OpenGL est actuellement surveillée par l'Architecture Review Board (ARB), formé en 1992. L'ARB se compose d'entreprises ayant un profond intérêt pour la création d'une API cohérente et largement disponible. Selon le site officiel d'OpenGL, AMD/ATI, Apple, Dell, Evans & Sutherland, Hewlett-Packard, IBM, Intel, Matrox, Nvidia, SGI et Sun font partie des membres votants (juin 2002). Microsoft, l'un des membres fondateurs, s'est retiré en mars 2003.
+
+OpenGL 1.5
+Le 29 juillet 2003 est annoncé OpenGL 1.5. Au même moment, ARB annonce les spécifications d'une première ébauche de l'OpenGL Shading Language ainsi que les trois extensions ARB_shader_objects, ARB_vertex_shader et ARB_fragment_shader.
+
+OpenGL 2.0
+Le 7 septembre 2004 est annoncé OpenGL 2.0. l'OpenGL Shading Language (GLSL, également surnommé GLslang) à la syntaxe proche du langage C y est intégré dans une version définitive.
+
+OpenGL ES
+Le 31 juillet 2006 lors de la conférence de la Siggraph, l'ARB a annoncé sa décision de transférer le contrôle de la spécification OpenGL au Khronos Group, qui s'occupait déjà de différentes spécifications OpenGL pour les systèmes embarqués et les consoles de jeux vidéo dont OpenGL ES. L'Architecture Review Board a été dissoute le 21 septembre 2006, mais pour des raisons historiques, l'acronyme « ARB » a été conservé5.
+
+OpenGL 3.0
+Les spécifications officielles de OpenGL 3.0 ont été présentées le 11 août 2008. À l'origine, OpenGL 3 devait constituer un changement majeur, avec une refonte totale de l'API pour la rendre plus concurrentielle face à Direct3D. Il était notamment question d'abandonner les fonctionnalités obsolètes qui n'étaient, jusque-là, conservées que par souci de compatibilité avec les anciennes versions, l'utilisation d'un nouveau modèle objet plus cohérent qui encapsule notamment les états, etc6. Cependant, après un an de retard et une absence totale de communication de la part du groupe Khronos, cette refonte totale a été abandonnée au profit d'une mise à jour incrémentale permettant simplement de prendre en charge les dernières technologies graphiques7. Cette décision serait due à la volonté de rassurer certains marchés, par exemple en CAO, qui ne souhaitaient pas voir disparaître ces anciennes fonctionnalités8. Malgré tout, les fonctions obsolètes seront marquées « deprecated » dans les nouvelles spécifications, et pourraient être supprimées dans les versions futures.
+
+OpenGL 3.1
+ linkTo:site5.txt Les spécifications d'OpenGL 3.1 ont été publiées le 28 mai 2009. Il supprime toutes les fonctionnalités qui étaient déclarées obsolètes dans OpenGL 3.09,10.
+
+OpenGL 3.2
+Les spécifications d'OpenGL 3.2 ont été publiées le 3 août 2009. Les spécifications sont divisées, en 2 ; profil principal (core profile) et profil compatible (compatibility profile).
+
+Sa sortie est accompagnée de la sortie des spécifications du langage de shaders GLSL 1.5011.
+
+OpenGL 3.3
+Les spécifications d'OpenGL 3.2 ont été publiées le 11 mars 2010, ce sont les dernières spécifications de la série 3.3. Comme pour OpenGL 3.2, il y a un profile principal12 et un profil compatible13.
+
+Cette version est souvent utilisées comme version charnière à atteindre avant un portage d'un logiciel d'OpenGL à Vulkan.
+
+OpenGL 4.0
+Le 11 mars 2010, OpenGL 4.0 est annoncé, il a pour but d'exploiter pleinement le matériel compatible avec DirectX 11.
+
+Au même moment OpenGL 3.3 est également annoncé.
+
+Vulkan
+Article détaillé : Vulkan (API).
+Au début annoncé sous l’appellation OpenGL Next, Vulkan revoit d'importants concepts d'OpenGL afin de s'adapter aux 25 ans d'évolution des processeurs graphiques 3D depuis la première version. La compatibilité avec les anciennes versions n'est plus assurée.
+
+Les changements les plus notables sont :
+
+OpenGL et linkTo:site9.txt  OpenGL ES sont unifiés ;
+Les pilotes sont simplifiés, le processeur contrôle lui-même directement le GPU et la mémoire utilisée par celui-ci.
+Extensions
+La norme OpenGL permet à différents fabricants d'ajouter de nouvelles fonctionnalités sous forme d'extensions. Une extension est distribuée en 2 parties : un fichier d'en-têtes qui contient les fonctions prototypes de l'extension et les drivers du fabricant. Chacun d'eux possède une abréviation qui est utilisée pour nommer leurs nouvelles fonctions et constantes. Par exemple, l'abréviation de nVidia (« NV ») est utilisée pour définir leur fonction propriétaire « glCombinerParameterfvNV() » et leur constante « GL_NORMAL_MAP_NV ». Il peut arriver que plus d'un fabricant implémente la même fonctionnalité. Dans ce cas, l'abréviation « EXT » est utilisée. Il peut également arriver que l'ARB officialise une extension. Celle-ci devient alors un standard et l'abréviation « ARB » est utilisée. La première extension ARB fut GL_ARB_multitexture.
+
+Bibliothèques
+Plusieurs bibliothèques sont développées à partir d'OpenGL afin d'apporter des fonctionnalités qui ne sont pas disponibles dans la bibliothèque OpenGL elle-même :
+
+GLU ;
+GLUT (GL Utility Toolkit : combine l'accès à des fenêtres graphiques OpenGL et, de façon unifiée, aux interfaces utilisateur du système d'exploitation, quel que soit celui-ci);
+GLUI ;
+GLEW ;
+GLEE ;
+GLFW ;
+GLM.
+On notera en particulier la bibliothèque OpenGL Performer, développée par Silicon Graphics et disponible pour IRIX, Linux et quelques versions de Windows, qui permet la création d'applications de rendus temps réel.
+
+Exemple simple de programme OpenGL
+Voici un programme simple, en 2D, dessinant un triangle et permettant de modifier instantanément sa couleur en pressant l'une des touches r, g, b et celle du fond avec R, G, B. La touche q quitte le programme14. Celui-ci, qui utilise GLUT pour simplifier la programmation (penser à l'installer par Synaptic ou autre), est compilé et exécuté, sous Linux ou WSL sous Windows 10, parcc colorswap.c -lglut -lGL -lGLU && ./a.out. Les bibliothèques OpenGL sont à installer depuis les dépôts de votre distribution particulière15. L'objectif du code est ici la lisibilité et non la performance.
+B
