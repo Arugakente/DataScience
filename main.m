@@ -1,19 +1,34 @@
 #Via le nombre de lien
 n = ones(15,1);
+multiCount = true;
 
 #Matrice bidon (en attendant l'automatisation/google)
-M = zeros(15); %A remplacer
-%A voir : valeur de 1 si plusieurs fois lien vers même page, ou valeur de nb de fois le lien
+files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
+
+M = zeros(numel(files),numel(files));
+
+for i=1:numel(files)
+  currentFile = textread (files{i}, "%s");
+  linkFrom = str2num(substr(files{i},rindex(files{i},"/")+5,rindex(files{i},".")-(rindex(files{i},"/")+5)));
+  for j =1:numel(currentFile)
+      currentWord = currentFile{j};
+      if  isempty(regexp(currentWord,"linkTo:.*")) == 0
+          linkTo = str2num( substr(currentWord,index(currentWord,":")+5,index(currentWord,".")-(index(currentWord,":")+5)));
+          if linkTo != linkFrom
+                if  multiCount
+                  M(linkFrom,linkTo)+=1;
+                else  
+                  M(linkFrom,linkTo)=1;
+                endif
+           endif
+      endif
+
+      endfor
+endfor
+
+%A voir : valeur de 1 si plusieurs fois lien vers mï¿½me page, ou valeur de nb de fois le lien
 
 disp(M);
-
-#{     
-for i=1:size(M)(1)
-  for j=1:size(M)(1) 
-    M(j,i) = rand();
-  endfor
-endfor
-#}
 
 for i=1:size(M)(1)
   somme = sum(M(:,i));
@@ -25,7 +40,7 @@ for i=1:size(M)(1)
   disp(sum(M(:,i)));
 endfor
 
-
+disp(M);
 
 T = 10;
 
