@@ -1,7 +1,7 @@
 n = ones(15,1);
 multiCount = true;
 
-files = glob("C:/Users/Kente/Documents/DataScienceP1/Dataset/processed/*.txt");
+files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
 
 M = zeros(numel(files),numel(files));
 
@@ -28,7 +28,7 @@ for i=1:numel(files)
         
         isContained = false;
         for i=1:size(wordList)
-          if size(wordList)!=0 && strcmp(wordList(i),currentWord) %On rajoute le lien associé
+          if size(wordList)!=0 && strcmp(wordList(i),currentWord) %On rajoute le lien associï¿½
             currentParc = 1;
             found = false;
             while !found && currentParc <= size(listSite{i})
@@ -46,7 +46,7 @@ for i=1:numel(files)
             break;
           endif
         endfor 
-        if !isContained %On rajoute le mot à la liste
+        if !isContained %On rajoute le mot ï¿½ la liste
           wordList = [wordList;[currentWord]];
           listSite = [listSite; num2cell([linkFrom])];
         endif
@@ -54,7 +54,6 @@ for i=1:numel(files)
     endif
   endfor
 endfor
-
 
 disp(M);
 
