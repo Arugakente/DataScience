@@ -2,7 +2,6 @@
 n = ones(15,1);
 multiCount = true;
 
-#Matrice bidon (en attendant l'automatisation/google)
 files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
 
 M = zeros(numel(files),numel(files));
@@ -25,8 +24,6 @@ for i=1:numel(files)
 
       endfor
 endfor
-
-%A voir : valeur de 1 si plusieurs fois lien vers m�me page, ou valeur de nb de fois le lien
 
 disp(M);
 
