@@ -1,7 +1,9 @@
 n = ones(15,1);
 multiCount = true;
 
-files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
+a = 0.85;
+
+files = glob("C:/Users/Kente/Documents/DataScienceP1/Dataset/processed/*.txt");
 
 M = zeros(numel(files),numel(files));
 
@@ -28,15 +30,13 @@ for i=1:numel(files)
         
         isContained = false;
         for i=1:size(wordList)
-          if size(wordList)!=0 && strcmp(wordList(i),currentWord) %On rajoute le lien associï¿½
+          if size(wordList)!=0 && strcmp(wordList(i),currentWord) %On rajoute le lien associé
             currentParc = 1;
             found = false;
             while !found && currentParc <= size(listSite{i})
-              if(size(listSite{i}) == 1)
-                found = strcmp(listSite{i},linkFrom);
-              else
-                found = strcmp(listSite(i)(currentParc),linkFrom);
-              endif
+              found = strcmp(listSite{i}(currentParc),linkFrom);
+              disp(listSite{i}(currentParc))
+              disp(
               currentParc+=1;
             endwhile;
             if !found
@@ -46,7 +46,7 @@ for i=1:numel(files)
             break;
           endif
         endfor 
-        if !isContained %On rajoute le mot ï¿½ la liste
+        if !isContained %On rajoute le mot à la liste
           wordList = [wordList;[currentWord]];
           listSite = [listSite; num2cell([linkFrom])];
         endif
@@ -61,7 +61,12 @@ for i=1:size(M)(1)
   somme = sum(M(:,i));
   
   for j=1:size(M)(2)
-    M(j,i) = M(j,i)/somme;
+    if somme == 0
+      M(j,i) = 1 / size(M)(1); %pour bien avoir un système de Markov
+    else
+      M(j,i) = M(j,i)/somme; %normalisation
+    endif
+    M(j,i) = a*M(j,i) + 1*(1-a) / size(M)(1); %formule matrice de google
   endfor
   
   disp(sum(M(:,i)));
