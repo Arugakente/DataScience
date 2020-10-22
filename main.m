@@ -5,13 +5,26 @@ files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/
 
 M = zeros(numel(files),numel(files));
 
-wordList = cell(0,1);
-listSite =  cell(0,1);
+invertedIndex = containers.Map();
+
+stopwordsMap = containers.Map();
+stopwordsMap("") = 0;
+
+%chagement de la liste des stopwords
+stopwords = textread("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/stopwords.txt", "%s");
+for i=1:numel(stopwords)
+  stopwordsMap(stopwords{i}) = 0;
+  disp(stopwords{i});
+endfor
 
 for i=1:numel(files)
   currentFile = textread(files{i}, "%s");
-  linkFrom = str2num(substr(files{i},rindex(files{i},"\\") + 5, rindex(files{i},".") - (rindex(files{i},"\\") + 5)));
+  linkFrom = str2num(substr(files{i},rindex(files{i},"/") + 5, rindex(files{i},".") - (rindex(files{i},"/") + 5)));
   for j=1:numel(currentFile)
+    #disp(i)
+    #disp(numel(files))
+    #disp(j)
+    #disp(numel(currentFile))
     currentWord = currentFile{j};
     if isempty(regexp(currentWord,"linkTo:.*")) == 0 %On traite le lien
       linkTo = str2num(substr(currentWord,index(currentWord,":")+5,index(currentWord,".")-(index(currentWord,":")+5)));
@@ -23,34 +36,22 @@ for i=1:numel(files)
         endif
       endif
     else %On traite le mot
-      if size(currentWord) != 0
-        %nettoyage des mots
-        
-        isContained = false;
-        for i=1:size(wordList)
-          if size(wordList)!=0 && strcmp(wordList(i),currentWord) %On rajoute le lien associ�
-            currentParc = 1;
-            found = false;
-            while !found && currentParc <= size(listSite{i})
-              if(size(listSite{i}) == 1)
-                found = strcmp(listSite{i},linkFrom);
-              else
-                found = strcmp(listSite(i)(currentParc),linkFrom);
-              endif
-              currentParc+=1;
-            endwhile;
-            if !found
-              listSite{i} = [listSite{i}; linkFrom];
-              isContained = true;
-            endif;
-            break;
-          endif
-        endfor 
-        if !isContained %On rajoute le mot � la liste
-          wordList = [wordList;[currentWord]];
-          listSite = [listSite; num2cell([linkFrom])];
+      currentWord = tolower(currentWord);
+      currentWord = strtrim(currentWord);
+      currentWord = regexprep(currentWord,'[\.\,\(\)«»—]','');
+      if !isKey(stopwordsMap,currentWord) && !isempty(currentWord) && isempty(regexp(currentWord,'[!@#\$%\^&*()_+\=\[\]{};:"\\|,.<>\/?]|[0-9]'))
+        %nettoyage des mots   
+        if isKey(invertedIndex,currentWord)
+          tmp = invertedIndex(currentWord);
+          tmp(linkFrom) = 1;
+          invertedIndex(currentWord) = tmp;
+        else %On rajoute le mot � la liste
+          tmp = zeros(1,numel(files));
+          tmp(linkFrom) = 1;
+          invertedIndex(currentWord) = tmp;
+          disp(invertedIndex);
         endif
-      endif
+     endif
     endif
   endfor
 endfor
@@ -85,4 +86,4 @@ hold on;
 
 for i=1:size(M)(1)
   plot(0:T, x(i,:));
-endfor
+endfor 
