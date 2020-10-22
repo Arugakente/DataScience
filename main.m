@@ -1,7 +1,9 @@
 n = ones(15,1);
 multiCount = true;
 
-files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
+a = 0.85;
+
+files = glob("C:/Users/Kente/Documents/DataScienceP1/Dataset/processed/*.txt");
 
 M = zeros(numel(files),numel(files));
 
@@ -62,7 +64,12 @@ for i=1:size(M)(1)
   somme = sum(M(:,i));
   
   for j=1:size(M)(2)
-    M(j,i) = M(j,i)/somme;
+    if somme == 0
+      M(j,i) = 1 / size(M)(1); %pour bien avoir un syst�me de Markov
+    else
+      M(j,i) = M(j,i)/somme; %normalisation
+    endif
+    M(j,i) = a*M(j,i) + 1*(1-a) / size(M)(1); %formule matrice de google
   endfor
   
   disp(sum(M(:,i)));
