@@ -1,9 +1,10 @@
-n = ones(15,1);
 multiCount = true;
 
 a = 0.85;
 
 files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
+
+n = ones(numel(files),1);
 
 M = zeros(numel(files),numel(files));
 
@@ -23,10 +24,10 @@ for i=1:numel(files)
   currentFile = textread(files{i}, "%s");
   linkFrom = str2num(substr(files{i},rindex(files{i},"/") + 5, rindex(files{i},".") - (rindex(files{i},"/") + 5)));
   for j=1:numel(currentFile)
-    #disp(i)
-    #disp(numel(files))
-    #disp(j)
-    #disp(numel(currentFile))
+    disp(i)
+    disp(numel(files))
+    disp(j)
+    disp(numel(currentFile))
     currentWord = currentFile{j};
     if isempty(regexp(currentWord,"linkTo:.*")) == 0 %On traite le lien
       linkTo = str2num(substr(currentWord,index(currentWord,":")+5,index(currentWord,".")-(index(currentWord,":")+5)));
@@ -41,6 +42,7 @@ for i=1:numel(files)
       currentWord = tolower(currentWord);
       currentWord = strtrim(currentWord);
       currentWord = regexprep(currentWord,'[\.\,\(\)«»—]','');
+      #retrait des mots non porteurs de sens (via une liste de mot préchargée) et élimination des composantes n'étant pas des mots.
       if !isKey(stopwordsMap,currentWord) && !isempty(currentWord) && isempty(regexp(currentWord,'[!@#\$%\^&*()_+\=\[\]{};:"\\|,.<>\/?]|[0-9]'))
         %nettoyage des mots   
         if isKey(invertedIndex,currentWord)
@@ -51,7 +53,6 @@ for i=1:numel(files)
           tmp = zeros(1,numel(files));
           tmp(linkFrom) = 1;
           invertedIndex(currentWord) = tmp;
-          disp(invertedIndex);
         endif
      endif
     endif
@@ -91,6 +92,8 @@ figure(1);
 plot(0:T, x(1,:));
 hold on;
 
-for i=1:size(M)(1)
+for i=2:size(M)(1)
   plot(0:T, x(i,:));
 endfor 
+
+legend(files');

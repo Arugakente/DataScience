@@ -1,0 +1,210 @@
+me des poids des arcs qui le composent. Pour une paire donnée de sommets {\displaystyle s_{deb}}s_{{deb}} (le sommet du départ) {\displaystyle s_{fin}}s_{{fin}} (le sommet d'arrivée) appartenant à {\displaystyle S}S, l'algorithme trouve un chemin depuis {\displaystyle s_{deb}}s_{{deb}} vers {\displaystyle s_{fin}}s_{{fin}} de moindre poids (autrement dit un chemin le plus léger ou encore le plus court).
+
+L'algorithme fonctionne en construisant un sous-graphe {\displaystyle P}P de manière que la distance entre un sommet {\displaystyle s}s de {\displaystyle P}P depuis {\displaystyle s_{deb}}s_{{deb}} soit connue et soit un minimum dans {\displaystyle G}G. Initialement, {\displaystyle P}P contient simplement le nœud {\displaystyle s_{deb}}s_{{deb}} isolé, et la distance de {\displaystyle s_{deb}}s_{{deb}} à lui-même vaut zéro. Des arcs sont ajoutés à {\displaystyle P}P à chaque étape :
+
+1. en identifiant tous les arcs {\displaystyle a_{i}=(s_{i1},s_{i2})}a_{i}=(s_{i1},s_{i2}) dans {\displaystyle P\times G}P\times G;
+2. en choisissant l'arc {\displaystyle a_{j}=(s_{j1},s_{j2})}a_{j}=(s_{j1},s_{j2}) dans {\displaystyle P\times G}P\times G qui donne la distance minimum depuis {\displaystyle s_{deb}}s_{{deb}} à {\displaystyle s_{j2}}s_{{j2}} en passant tous les chemins créés menant à ce nœud.
+L'algorithme se termine soit quand {\displaystyle P}P devient un arbre couvrant de {\displaystyle G}G, soit quand tous les nœuds d'intérêt4 sont dans {\displaystyle P}P.
+
+On peut donc écrire l'algorithme de la façon suivante :
+
+Entrées :
+
+
+    {\displaystyle G=(S,A)}
+
+{\displaystyle G=(S,A)} un graphe avec une pondération positive
+
+
+    {\displaystyle poids}
+
+{\displaystyle poids} des arcs,
+
+
+    {\displaystyle s_{deb}}
+
+s_{{deb}} un sommet de
+
+
+    {\displaystyle S}
+
+S
+
+
+
+
+    {\displaystyle P:=\emptyset }
+
+P:=\emptyset
+
+
+
+    {\displaystyle d[a]:=+\infty }
+
+d[a]:=+\infty  pour chaque sommet
+
+
+    {\displaystyle a}
+
+a
+
+
+
+    {\displaystyle d[s_{deb}]=0}
+
+{\displaystyle d[s_{deb}]=0}
+Tant qu'il existe un sommet hors de
+
+
+    {\displaystyle P}
+
+P
+    Choisir un sommet
+
+
+    {\displaystyle a}
+
+a hors de
+
+
+    {\displaystyle P}
+
+P de plus petite distance
+
+
+    {\displaystyle d[a]}
+
+d[a]
+    Mettre
+
+
+    {\displaystyle a}
+
+a dans
+
+
+    {\displaystyle P}
+
+P
+    Pour chaque sommet
+
+
+    {\displaystyle b}
+
+b hors de
+
+
+    {\displaystyle P}
+
+P voisin de
+
+
+    {\displaystyle a}
+
+a
+       Si d[b] > d[a] + poids(a, b)
+
+
+
+    {\displaystyle d[b]=d[a]+poids(a,b)}
+
+{\displaystyle d[b]=d[a]+poids(a,b)}
+           prédécesseur[b] := a
+	       Fin Pour
+	       Fin Tant Que
+	       Implémentation de l'algorithme
+	       Fonctions annexes
+	       L'algorithme utilise les fonctions annexes suivantes.
+
+Initialisation de l'algorithme
+Initialisation(G,sdeb)
+1 pour chaque point s de G faire
+2    d[s] := infini             /* on initialise les sommets autres que sdeb à infini */5
+3 fin pour
+4 d[sdeb] := 0                  /* la distance au sommet de départ sdeb est nulle */
+Recherche d'un nœud de distance minimale
+On recherche un nœud de distance minimale (relié par l'arc de poids le plus faible) de {\displaystyle s_{deb}}s_{{deb}} parmi les nœuds situés hors de {\displaystyle P}P. Le complémentaire de {\displaystyle P}P est noté {\displaystyle Q}Q. On implémente pour cela une fonction Trouve_min(Q) qui choisit un nœud de Q de distance minimale.
+Trouve_min(Q)
+1 mini := infini
+2 sommet := -1
+3 pour chaque sommet s de Q
+4    si d[s] < mini
+5    alors
+6        mini := d[s]
+7        sommet := s
+8 renvoyer sommet
+Mise à jour des distances
+On met à jour les distances entre {\displaystyle s_{deb}}s_{{deb}} et {\displaystyle s_{2}}s_{{2}} en se posant la question : vaut-il mieux passer par {\displaystyle s_{1}}s_{{1}} ou pas ?
+maj_distances(s1,s2)
+1 si d[s2] > d[s1] + Poids(s1,s2)      /* Si la distance de sdeb à s2 est plus grande que */
+2                                      /* celle de sdeb à S1 plus celle de S1 à S2 */
+3    alors
+4        d[s2] := d[s1] + Poids(s1,s2) /* On prend ce nouveau chemin qui est plus court */
+5        prédécesseur[s2] := s1        /* En notant par où on passe */
+Fonction principale
+Cette section n’est pas rédigée dans un style encyclopédique. Améliorez sa rédaction !
+Voici la fonction principale utilisant les précédentes fonctions annexes :
+
+Dijkstra(G,Poids,sdeb)
+1 Initialisation(G,sdeb)
+2 Q := ensemble de tous les nœuds
+3 tant que Q n'est pas un ensemble vide faire
+4       s1 := Trouve_min(Q)
+5       Q := Q privé de s1
+6       pour chaque nœud s2 voisin de s1 faire
+7           maj_distances(s1,s2)
+8       fin pour
+9 fin tant que
+Le plus court chemin de {\displaystyle s_{deb}}s_{{deb}} à {\displaystyle s_{fin}}s_{{fin}} peut ensuite se calculer itérativement selon l'algorithme suivant, avec {\displaystyle A}A la suite représentant le plus court chemin de {\displaystyle s_{deb}}s_{{deb}} à {\displaystyle s_{fin}}s_{{fin}}:
+
+1 A = suite vide
+2 s := sfin
+3 tant que s != sdeb faire
+4   A = A + s                 /* on ajoute s à la suite A */
+5   s = prédécesseur[s]       /* on continue de suivre le chemin */
+6 fin tant que
+Attention : s'il n'y a pas de chemin de {\displaystyle s_{deb}}s_{{deb}} à {\displaystyle s_{fin}}s_{{fin}} cette partie de l'algorithme fait une boucle infinie ou une erreur selon votre implémentation.
+
+Spécialisation de l'algorithme
+Il est possible de spécialiser l'algorithme en arrêtant la recherche lorsque l'égalité {\displaystyle s_{1}=s_{fin}}s_{1}=s_{fin} est vérifiée, dans le cas où on ne cherche que la distance minimale entre {\displaystyle s_{deb}}s_{{deb}} et {\displaystyle s_{fin}}s_{{fin}}.
+
+Complexité de l'algorithme
+L'efficacité de l'algorithme de Dijkstra repose sur une mise en œuvre efficace de Trouve_min. L'ensemble {\displaystyle Q}Q est implémenté par une file à priorités. Si le graphe possède {\displaystyle |A|}{\displaystyle |A|} arcs et {\displaystyle |S|}|S| nœuds, qu'il est représenté par des listes d'adjacence et si on implémente la file à priorités par un tas binaire (en supposant que les comparaisons des poids d'arcs soient en temps constant), alors la complexité en temps de l'algorithme est {\displaystyle O((|A|+|S|)\times \log(|S|))}{\displaystyle O((|A|+|S|)\times \log(|S|))}. En revanche, si on implémente la file à priorités avec un tas de Fibonacci, l'algorithme est en {\displaystyle O(|A|+|S|\times \log(|S|))}{\displaystyle O(|A|+|S|\times \log(|S|))}6.
+
+Correction de l'algorithme
+La démonstration de correction est une récurrence sur Card(P) (qui augmente de 1 à chaque itération) et repose sur l'invariant suivant :
+
+{\displaystyle {\begin{cases}\forall c\in P,\,d(c)=mini(c)\\\forall c\not \in P,\,d(c)=miniP(c)\end{cases}}}{\displaystyle {\begin{cases}\forall c\in P,\,d(c)=mini(c)\\\forall c\not \in P,\,d(c)=miniP(c)\end{cases}}}
+
+où :
+
+mini(c) est le poids d'un plus court chemin menant à c ;
+miniP(c) est le poids d'un plus court chemin dont tous les sommets intermédiaires sont dans P menant à c.
+Si n = Card(P), la preuve est la suivante :
+
+pour n = 0 et 1 : immédiat ;
+pour n un entier non nul, supposons l'invariant vrai.
+L'algorithme sélectionne un pivot {\displaystyle a\not \in P}{\displaystyle a\not \in P} tel que {\displaystyle d(a)={\underset {x\not \in P}{Min}}\,d(x)}{\displaystyle d(a)={\underset {x\not \in P}{Min}}\,d(x)}, et l'ajoute dans P. Il faut donc montrer que {\displaystyle d(a)=mini(a)}{\displaystyle d(a)=mini(a)} après modification de P:
+
+Par hypothèse, {\displaystyle d(a)=miniP(a)}{\displaystyle d(a)=miniP(a)} avant modification de P, donc s'il existe un chemin C tel que {\displaystyle poids(C)<d(a)}{\displaystyle poids(C)<d(a)} alors ce chemin contient au moins un sommet b {\displaystyle \neq }{\displaystyle \neq } a tel que {\displaystyle b\not \in P}{\displaystyle b\not \in P}.
+
+Soit donc un tel sommet b tel que tous ses prédécesseurs dans C soient dans P (il existe car le premier sommet de C est l'origine qui est dans P). Décomposons C en Cb- et Cb+ où Cb- est la première partie de C dont le dernier sommet est b, et Cb+ la suite de C. Alors {\displaystyle poids(C)=poids(Cb-)+poids(Cb+)\geq poids(Cb-)=d(b)\geq d(a)}{\displaystyle poids(C)=poids(Cb-)+poids(Cb+)\geq poids(Cb-)=d(b)\geq d(a)} : contradiction.
+
+Il n'existe donc aucun chemin C tel que {\displaystyle poids(C)<d(a)}{\displaystyle poids(C)<d(a)} d'où {\displaystyle d(a)=mini(a)}{\displaystyle d(a)=mini(a)}. L'égalité est toujours vraie pour les autres éléments de P.
+
+Enfin, l'algorithme met à jour la fonction d (et prédécesseur) pour les successeurs b du pivot a : {\displaystyle d[b]=\min(d[b],d[a]+poids(a,b))}d[b]=\min(d[b],d[a]+poids(a,b)).
+
+Montrons qu'alors, {\displaystyle \forall c\not \in P,\,d(c)=miniP(c)}{\displaystyle \forall c\not \in P,\,d(c)=miniP(c)} :
+
+si c n'est pas un successeur du pivot a, alors il n'existe aucun nouveau chemin C menant à c tel que {\displaystyle poids(C)<d(c)}{\displaystyle poids(C)<d(c)} et dont tous les sommets intermédiaires sont dans P après l'ajout de a dans P puisqu'il faudrait alors passer par a avant de passer par un autre sommet {\displaystyle d\in P}{\displaystyle d\in P}, mais ce ne serait pas le plus court chemin jusqu'à d puisque le poids du plus court chemin jusqu'à d a déjà été calculé avant l'ajout de a dans P par hypothèse, et ce chemin ne contient donc que des sommets ayant été dans P avant l'ajout de a dans P ;
+sinon, il existe de tels chemins, en notant C le meilleur d'entre eux, alors C sera un des nouveaux chemins engendrés par l'ingestion du pivot a par P, donc {\displaystyle a\in C}{\displaystyle a\in C} et d'autre part le pivot a est le dernier sommet intermédiaire de C puisque le plus court chemin menant aux autres sommets de P ne passe par a comme expliqué plus haut. C est donc la réunion du plus court chemin menant à a avec l'arc (a, c) : d'où {\displaystyle poids(C)=d(c)=poids((a,c))+d(a)=miniP(c)}{\displaystyle poids(C)=d(c)=poids((a,c))+d(a)=miniP(c)}.
+Applications
+L'algorithme de Dijkstra trouve une utilité dans le calcul des itinéraires routiers. Le poids des arcs pouvant être la distance (pour le trajet le plus court), le temps estimé (pour le trajet le plus rapide), la consommation de carburant et le prix des péages (pour le trajet le plus économique). [réf. nécessaire]
+
+Une application courante de l'algorithme de Dijkstra apparaît dans les protocoles de routage interne « à état de liens », tels que Open Shortest Path First (OSPF)7 ou IS-IS8 – ou encore PNNI (en) sur les réseaux ATM –, qui permettent un routage internet très efficace des informations en cherchant le parcours le plus efficace.[réf. nécessaire]
+
+Comparaison avec d'autres algorithmes
+L'algorithme de Dijkstra est fondé sur un parcours en largeur.
+La spécialisation de l'algorithme de Dijkstra qui calcule un plus court chemin d'une source à une destination est une instance de l'algorithme A* dans lequel la fonction heuristique est la fonction nulle. L'algorithme A* qui utiliserait une heuristique minorante et monotone (par exemple la distance à vol d'oiseau) peut être plus efficace [réf. souhaitée].
+L'algorithme ne s'applique pas aux graphes avec des poids négatifs. Mais l'algorithme de Bellman-Ford permet de résoudre le problème des plus courts chemins depuis une source avec des poids négatifs (mais sans cycle négatif).
+L'algorithme de Floyd-Warshall calcule des plus courts chemins entre tous les sommets dans un graphe où les poids peuvent être négatifs.

@@ -1,89 +1,14 @@
- BlueN 1 le petit-fils du professeur, qui se révèlera être un rival dans la quête du joueur. Le joueur et son rival doivent alors choisir un « Pokémon de départ » pour leurs voyages parmi les trois proposés par le professeur Chen. Les deux garçons peuvent choisir entre Bulbizarre, Salamèche et Carapuce (Bulbasaur, Charmander et Squirtle)2. Le rival défie ensuite immédiatement le joueur dans un combat où s'affrontent leurs deux Pokémon de départ ; il continuera de combattre le héros tout au long de son aventure3.
-
-Le joueur entame alors une quête à travers Kanto, capturant des Pokémon sauvages, les entraînant et combattant avec ceux des autres dresseurs Pokémon, avec pour but de d'obtenir le titre de « Maître Pokémon ». Pour cela, il rencontrera dans certaines villes des établissements spéciaux appelées « arènes », à l'intérieur desquelles demeure un Champion que le joueur devra battre dans un combat Pokémon pour obtenir un badge. Une fois les huit badges acquis, le joueur sera autorisé à combattre la Ligue Pokémon, qui se compose des meilleurs dresseurs de Pokémon de la région. Le héros devra défaire les quatre membres de la Ligue puis, in fine, son rival pour devenir Maître Pokémon3.
-
-Tout au long du jeu, le joueur devra combattre les forces de la Team Rocket, une organisation criminelle qui vole les Pokémon. Le huitième et dernier Champion s'avérera être Giovanni, le chef de la Team Rocket ; sa défaite face au joueur marque la fin de l'organisation3,4.
-
-Système de jeu
-Article détaillé : Système de jeu de Pokémon.
-En solo
-Comme de nombreux jeux vidéo de rôle, Pokémon Rouge et Bleu adoptent une perspective en vue aérienne à la troisième personne, le joueur contrôlant directement le protagoniste dans le monde de fiction, tout en interagissant avec divers objets et personnes5. En parcourant ce monde, le joueur traverse différents types de terrains, comme les hautes herbes, les forêts, les grottes ou les mers, dans lesquels résident différentes espèces de Pokémon sauvages, qui apparaissent aléatoirement. Le joueur peut les capturer à l'aide de Poké Balls pour ensuite les faire combattre pour lui. Des dresseurs de Pokémon non-joueur sont également présents dans ces zones pour combattre le joueur avec leurs Pokémon. Lorsque le joueur rencontre un Pokémon sauvage ou un dresseur, l'action passe à une scène de bataille au tour par tour, où les Pokémon du joueur combattent avec leurs pouvoirs le Pokémon adverse2.
-
-Un aspect majeur du jeu est le développement des Pokémon par leurs combats contre d'autres Pokémon, qu'ils soient sauvages ou appartiennent à d'autres dresseurs. Ce système, caractéristique de tous les jeux vidéo Pokémon, permet au Pokémon d'acquérir des points d'expérience en cas de victoire et, par accumulation, d'augmenter de niveau, ce qui améliore ses statistiques et lui permet d'apprendre de nouvelles attaques6. La majorité des Pokémon, lorsqu'ils atteignent un niveau donné, évolue en un nouveau Pokémon plus puissant. L'ultime but du jeu est de remplir les 150 entrées du Pokédex, une encyclopédie recensant l'ensemble des espèces de Pokémon, en obtenant de nouveaux Pokémon par capture, évolution ou échange avec d'autres joueurs2.
-
-Le jeu comprend de nombreux bugs mineurs comme la capacité de dupliquer des objets ; en outre, il existe un certain nombre de « Pokémon-bugs », le plus célèbre étant MissingNo. Décrit par Nintendo comme une « bizarrerie de programmation », MissingNo. apparaît en combat comme un amas de pixels et peut souvent causer des dysfonctionnements au jeu7,8,9.
-
-Connectivité
-Deux Game Boy reliées par un câble link.
-L'échange de créatures via le câble de connexion entre deux Game Boy est au cœur du gameplay du jeu.
-Les jeux Pokémon Rouge et Bleu permettent aux joueurs d'échanger des Pokémon entre deux cartouches de jeu par l'intermédiaire d'un câble link connectant les deux Game Boy2. Cette méthode d'échange est nécessaire afin de compléter le Pokédex : en effet, chacune des deux versions comporte des Pokémon exclusifsN 3,10 rendant nécessaire un échange pour les obtenir sur l'autre jeu. De plus, quatre Pokémon nécessitent un échange pour évoluerN 3 et le choix de certains Pokémon l'empêche d'en obtenir d'autres, rendant nécessaire d'importer d'une autre version ceux qui n'ont pas été choisisN 3. Le câble link permet également de combattre avec sa propre équipe de Pokémon l'équipe de l'autre joueur2, ouvrant les possibilités de combat Pokémon au-delà des seuls dresseurs non-joueurs.
-
-Les cartouches dans des langues différentes ne sont pas compatibles entre elles : de tels échanges entraînent l'effacement des fichiers de sauvegarde2. En outre, si les jeux sont utilisés avec une Game Boy Advance, l'échange requiert l'utilisation non pas du câble « Game Boy Advance Game Link » mais du câble « Universal Game Link » de la Game Boy et de la Game Boy Color11.
-
-La connectivité peut être effectuée avec Pokémon Jaune de la même manière qu'entre Pokémon Rouge et Bleu. L'échange – mais pas le combat – est également possible avec la deuxième génération de jeux Pokémon, Pokémon Or, Argent et Cristal ; toutefois, il n'est possible qu'en l'absence, dans l'équipe du joueur, de tout Pokémon et de toute attaque introduits avec la deuxième génération12. Les versions rouge et bleue ne sont par contre plus compatibles avec les générations suivantes de jeux13. En utilisant le Transfer Pak pour la Nintendo 64, les Pokémon ou les objets de Pokémon Rouge et Bleu peuvent également être utilisées dans les jeux Pokémon Stadium14 et Pokémon Stadium 215 sur Nintendo 64.
-
-Développement
-Genèse
-Le concept de Pokémon est l'œuvre du concepteur de jeux japonais Satoshi Tajiri. L'idée lui vient de la passion qu'il avait étant enfant pour la collection d'insectes, un passe-temps populaire au Japon. En vieillissant, il constate une diminution de la population d'insectes dans la ville où il a grandi, du fait de l'urbanisation, et que les enfants jouent plutôt dans leur maison qu'en extérieur. Il conçoit alors l'idée d'un jeu vidéo basé sur la capture et la collection de créatures rappelant ses insectes : les Pokémon, auxquels les enfants pourraient se lier en les nommant individuellement et en les contrôlant. Comme Satoshi Tajiri ne voulait pas remplir son monde vidéoludique de violence inutile, il décida que ses monstres ne saigneraient pas ni ne mourraient et perdraient un combat en s'évanouissant16,17.
-
-Tajiri fonde la société Game Freak avec son ami Ken Sugimori en 1989. L'année suivante sont dessinés les premiers croquis de ce qui s'appelle alors Capsule Monsters18,19. On y retrouve les premiers Pokémon : Rhinoféros (Rhydon)N 4, premier Pokémon créé, ce à quoi rendraient hommage les statues à son effigie récurrentes dans Pokémon Rouge et Bleu20, ou encore Nidorino et Ectoplasma (Gengar)N 5, représentés dans un combat qui constitue la séquence d'ouverture de Pokémon Rouge18.
-
-En 1991, Tajiri découvre la Game Boy, qu'il trouve idéale pour son concept de jeu en raison de la liaison par câble link, dont il envisage qu'elle serve à des échanges de Pokémon. Ce concept d'échange était nouveau dans le monde des jeux vidéo : auparavant, les câbles de connexion étaient utilisés seulement pour les affrontements17. Tajiri a aussi été influencé par The Final Fantasy Legend : il expliquera que ce jeu lui a donné l'idée que pouvaient être développés pour la Game Boy bien plus que de simples jeux d'action21.
-
-Japon
-Lorsqu'il propose son idée de jeu à Nintendo, Tajiri pense qu'elle sera refusée. Nintendo accepte néanmoins, moins intéressé par le concept du jeu, qu'elle ne comprend pas vraiment, que par la qualité des précédents travaux de Tajiri16. Shigeru Miyamoto, le père des succès mondiaux Super Mario et The Legend of Zelda, prend Tajiri sous son aile16. Il lui propose la création de plusieurs versions du jeu avec des Pokémon différents dans chacune, notant que cela pourrait aider le jeu au niveau commercial22 : ce seront Pokémon Vert et Pokémon Rouge.
-
-Le développement du jeu prend six ans, pendant lesquels Game Freak connaît d'importantes difficultés financières : Tajiri renonce temporairement à son salaire et cinq de ses salariés démissionnent16. Ken Sugimori dirige l'élaboration des dessins et des graphiques de l'univers des Pokémon, alors que la musique est composée par Junichi Masuda23. Masuda crée les effets sonores et les cris des Pokémon ; il compose également le thème d'ouverture du jeu, qu'il réalise avec l'image de scènes de bataille à l'esprit, en utilisant du bruit blanc pour refaire le bruit de la marche et imiter la caisse claire24. Tajiri attribue des noms par défaut aux personnages principaux : Satoshi, son prénom, et Shigeru, pour Miyamoto17,25 ; par la suite, ces personnages seront nommés « Red » et « Blue » dans Pokémon Or et Argent. L'exploitation du code du jeu par les fans a également mis en évidence qu'il était prévu de pouvoir affronter le Professeur Chen en tant que défi ultime du jeu26,27.
-
-À la fin du développement, après le retrait d'éléments servant au débogage qui ont libéré un peu d'espace dans la mémoire du jeu, un programmeur de Game Freak, Shigeki Morimoto, introduit secrètement un 151e Pokémon appelé Mew. Sa première intention était que seul le personnel de Game Freak soit au courant de l'existence de ce Pokémon et puisse l'obtenir28 ; cependant, Tajiri révélera son existence au public quelques mois après la sortie des deux jeux et permettra aux joueurs de l'obtenir par le biais d'un événement promotionnel de Nintendo29. Ce Pokémon insaisissable fut à l'origine de nombreuses rumeurs sur les moyens de le capturer30 jusqu'à ce qu'un glitch soit découvert en 2003 pour l'attraper8.
-
-Junichi Masuda.
-Junichi Masuda compose les musiques et réalise l'environnement sonore.
-Équipe de développement31
-Réalisateur : Satoshi Tajiri ;
-Programmeurs : Takenori Ohta, Shigeki Morimoto, Tetsuya Watanabe, Junichi Masuda, Sousuke Tamada ;
-Character Design : Ken Sugimori, Atsuko Nishida ;
-Musique : Junichi Masuda ;
-Effets sonores : Junichi Masuda ;
-Game Design : Satoshi Tajiri ;
-Design monstres : Ken Sugimori, Atsuko Nishida, Motofumi Fuziwara, Shigeki Morimoto, Satoshi Ohta, Rena Yoshikawa ;
-Scénario : Satoshi Tajiri, Ryohsuke Taniguchi, Fumihiro Nonomura, Hiroyuki Zinnai ;
-Conception paramétrique : Koji Nishino, Takeo Nakamura ;
-Design carte : Satoshi Tajiri, Koji Nishino, Kenji Matsushima, Fumihiro Nonomura, Ryohsuke Taniguchi ;
-Producteurs : Shigeru Miyamoto, Takeshi Kawaguchi, Tsunekazu Ishihara.
-Occident
-Malgré le succès que les jeux connaissent au Japon, leur publication en Occident présente de nombreuses difficultés, la première étant le manque d'engouement du public occidental pour les jeux vidéo de rôle, particulièrement sur Game Boy. De plus, il apparaît nécessaire d'adapter le jeu à son nouveau public : les références à la culture japonaises sont limitées, et les noms des Pokémon sont adaptés en anglais16. Des craintes sont également exprimées quant à l'aspect mignon des Pokémon, qui pourraient ne pas être bien reçu par le public américain : l'équipe d'adaptation suggère de repenser et de renforcer leur design ; le président de Nintendo, Hiroshi Yamauchi, refuse, considérant qu'il s'agit d'un défi à relever32. D'un point de vue technique, il apparaît impossible de simplement traduire les textes du jeu japonais en anglais en raison de la fragilité de leur code source, conséquence de leur développement inhabituellement long ; les jeux sont donc entièrement reprogrammés à partir du code-source de Pocket Monsters Bleu23. Enfin, les deux jeux sont renommés « Pokémon », contraction de « Pocket Monsters » devenue courante au Japon, à cause du jeu de figurines Monster in my Pocket (en), dont le nom était trop proche33.
-
-À part les versions japonaise et anglaise du jeu, seules les versions française et allemande ont eu droit à une traduction des noms de Pokémon. Le traducteur français Julien Bardakoff explique en effet que Nintendo avait du mal à envisager d'abandonner les noms japonais et anglais pour les versions européennes, à la fois parce que les développeurs y étaient attachés, et parce que chaque nouveau nom devait faire l'objet d'un dépôt de marque. Les noms français retranscrivent plusieurs idées présentes dans le nommage japonais. Premièrement, on y retrouve des jeux de mots liés à leur apparence, comme par exemple le mot-valise composé de "neuf" à l'envers, de "feu" et de "renard" pour Feunard. Deuxièmement, des références culturelles, telles que D'Artagnan, Mike Tyson, Nosferatu ou le léviathan dans Dardardgnan, Tygnon, Nosférapti et Léviator. Troisièmement, une gradation des termes utilisés quand les Pokémon évoluent, ce qui s'illustre avec les mots "cool", "coups" et "carnage" dans les noms Roucool, Roucoups et Roucarnage. Quatrièmement, des sonorités qui évoquent les régions du pays ; les noms Racaillou et Piafabec ont été choisis en partie pour évoquer les sonorités respectivement provençales et bretonnes. Cependant, le nommage français ne s'appuie pas autant que le nommage japonais sur l'utilisation d'onomatopées, car celles-ci sont moins nombreuses et moins spécifiques en français. De plus, en japonais, les Pokémon dits "légendaires" ont un nom simple et élémentaire pour refléter leur caractère exceptionnel, tandis qu'en français le caractère exceptionnel est mieux retranscrit par un nom plus complexe comportant par exemple une référence mythologique. Par exemple, Electhor, qui fait référence en français au dieu nordique Thor, s'appelle サンダー (Sandā) en japonais, ce qui est la transcription de l'anglais "Thunder", signifiant simplement "tonnerre". Certains Pokémon ont gardé leur nom japonais, en particulier Pikachu qui, en tant que mascotte, devait conserver le même nom à l'international34.
-
-Les noms japonais des personnages principaux sont « Satoshi » (le héros) et « Shigeru » (le rival), en référence à Satoshi Tajiri et Shigeru Miyamoto. Ils deviennent « Ash » et « Gary » en version anglaise, et « Sacha » et « Régis » en version française, pour garder les sonorités des noms japonais et ainsi conserver cet hommage. De plus, en français, Régis renvoie au sketch des Nuls Régis est un con35,36,37.
-
-Pokémon version rouge et Pokémon version bleue sortent finalement le 30 septembre 1998 en Amérique du Nord, plus de deux ans et demi après les débuts Pokémon Vert et Rouge au Japon5. Ils paraissent dans la foulée en Australie, le 23 octobre 1998, et un an plus tard en Europe, le 8 octobre 1999. Chaque lancement s'accompagne de celui de toute la franchise Pokémon : dessin animé, cartes à jouer, mangas, jouets, etc.16 Les jeux sont extrêmement bien reçus par le public occidental et Pokémon devient une franchise majeure de Nintendo.
-
-Accueil
-Une Game Boy Pocket.
-Les jeux relancent les ventes de la Game Boy.
-Imaginés par Tajiri aux débuts de la Game Boy en 1990, Pokémon Vert et Rouge suivent un développement cahotique, principalement dû au manque de financement. D'autres jeux produits plus rapidement permettent au projet, ambitieux sur le papier, d'être maintenu en vie. Au bord de l'abandon en 199338, les développements de Pokémon Vert et Rouge sont finalement terminés en octobre 1995. Par manque de soutien de Nintendo et alors que la console est en fin de vie, la commercialisation pour les fêtes est manquée et n'est effective qu'en février 1996. Le démarrage du jeu, en partie dû aux dernières grandes sorties de la Super Nintendo et à celle de Resident Evil, est poussif. Mais fort du bouche-à-oreille positif, Tajiri décide de révéler au public l'existence du Pokémon secret Mew29,16, ajouté en toute fin de développement lors de la phase de débogage39. En avril, CoroCoro Comic organise un concours « Offre du Pokémon légendaire », dont les 20 gagnants se verront remettre le Pokémon introuvable : 78 000 personnes participent au concours29. Tajiri expliquera que son but était d'obliger les joueurs à échanger entre eux ce Pokémon et de maintenir l'intérêt du jeu en créant un mythe alimenté par le bouche-à-oreille17. Après cet événement, les ventes explosent : le jeu reste un an et demi en tête des ventes au Japon29 ; avec la sortie de la version bleue, les trois versions japonaises deviennent le premier jeu – et, vingt ans plus tard, restent le seul – à passer le seuil symbolique des 10 millions d'exemplaires vendus au Japon40.
-
-Au Japon, les versions verte, rouge et bleue combinées se sont vendues au total à 10,22 millions d'exemplaires40,41 ; en Amérique du Nord, Rouge et Bleu se vendent à 11,27 millions d'exemplaires et à 8,89 millions d'exemplaires en Europe41. En 2009, les jeux sont entrés dans le Livre Guinness des records en tant que « meilleure vente de RPG sur Game Boy » et « meilleure vente de RPG de tous les temps »42. À leur sortie, les jeux réalisent la seconde meilleure vente mondiale avec plus de 31 millions de jeux vendus dans le monde40,41 ; ils se sont fait depuis dépasser par Wii Sports en 2006, Mario Kart Wii en 2008 et Wii Sport Resort en 200941.
-
-Le succès de Pokémon Rouge et Bleu a été attribué au côté innovant de l'expérience de jeu, plutôt qu'aux effets audiovisuels. Des documents publiés par la Columbia Business School indiquent que les enfants japonais comme américains préfèrent le gameplay d'un jeu à ses effets audios ou visuels ; en ce qui concerne Pokémon, l'absence de ces effets artificiels aurait mis en avant l'imagination et la créativité de l'enfant43. « Avec tous les dialogues, les textures et plus encore, il y a quelque chose de rafraîchissant dans l'excellent système de jeu, qui vous fait oublier les faibles graphismes 8 bits. » a même commenté The GuardianN 6,44.
-
-Aperçu des notes reçues
-Presse papier
-Média  Note
-Consoles + (FR)	95 %45
-EGM (US) 8,5/1046
-Nintendo Power (US)	7,2/1047
-Player One (FR)		89 %48
-Presse numérique
-Média  Note
-Gamekult (FR)	7/1049
-GameSpot (US)	8,8/106
-IGN (US) 10/105
-Jeuxvideo.com (FR)	16/2050
-modifierConsultez la documentation du modèle
-
-À leur sortie, Pokémon Rouge et Bleu ont reçu de la presse spécialisée des retours principalement bons, avec une moyenne globale de 88 % sur GameRankings46,N 7. La critique a été plus particulièrement élogieuse sur les fonctionnalités multijoueurs d'échanges ou de combats entre Pokémon. Craig Harris, d'IGN, accorde aux jeux un 10/10, relevant que « Même si vous avez terminé la quête principale, vous n'avez peut-être pas tous les Pokémon du jeu. Le défi de tous les capturer est assurément l'aspect le plus important du jeu. »N 8 Il commente également la popularité des jeux chez les enfants, la qualifiant de « folie »5. Peter Bartholow, de GameSpot, qui attribue un 8,8/10 aux jeux, déplore cependant la faible qualité des graphismes et de la bande son, considérant qu'il s'agit des seuls défauts du jeu. Il salue le potentiel de rejouabilité des jeux de par sa variété, ainsi que leur aspect universel : « Contrairement aux apparences, Pokémon est un RPG unique en son genre, profond, avec un excellent mode multijoueur. Comme tout RPG, le jeu est suffisamment accessible pour les nouveaux joueurs, tout en divertissant les fans du genre. Il est incontestablement un des meilleurs jeux de la Game Boy à ce jour »N 9,6.
-
-Pokémon a cependant fait l'objet de condamnations de religieux fondamentalistes de diverses confessions, qui le considérait comme contraire à leur foi. Le fait que les Pokémon évoluent a notamment été visé par des religieux prônant une lecture littérale des textes religieux décrivant la création du monde et refusant la théorie de l'évolution51. En Arabie saoudite, une fatwa du grand mufti Abdul Aziz ibn Abdillah Ali ash-Shaykh a interdit l'ensemble des produits Pokémon dans le pays en 2001. Il les assimile notamment à des jeux d'argent, interdits par l'Islam, les accuse de « posséder les esprits » des enfants, de promouvoir le darwinisme et dénonce la présence sur les cartes de jeux d'« étoiles à six branches, symbole du sionisme international et de l'État d'Israël » et de « croix sous différentes formes »52,53.
+sega
+megadrive
+master system
+sonic
+knuckles
+tails
+game gear
+sega saturn
+dreamcast
+alex kid
+golden axe
+jeux videos
+jeux video
+bomberman

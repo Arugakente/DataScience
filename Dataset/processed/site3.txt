@@ -1,94 +1,13 @@
-
-Pays les plus consommateurs de PCB (données uniquement indicatives, car basées sur des calculs théoriques prenant le PIB en tant que référence9
-
-Émissions de PCB dans l'atmosphère en Europe en 1990 selon l'Agence européenne de l'environnement.
-
-Selon les déclarations faites par les États-membres à l'Agence européenne de l'environnement, hormis au Portugal, les émissions directes de PCB dans l'air ont diminué en Europe durant la période 1990-2009
-
-Importance relative (en %) des émissions historiques (par congénère chimique de PCB (estimation haute) selon Breivik K. et al., 2002. Selon le type de molécule, le produit est plus ou moins persistant et/ou toxique. Des effets synergiques sont plausibles entre certains congénères ou entre certains congénères et d'autres contaminants
-
-L'alimentation est la 1re source de contamination des organismes vivants.
-Modélisation (faite en 1988) de l'évolution des quantités ingérées de PCB respectivement chez l'Adulte et chez l'enfant pour la période 1976-1982 ; période où les émissions de PCB dans l'eau, l'air et les sols ont commencé à diminuer à la suite de l'évolution de la réglementation
-
-Indicateurs d'évolution récente de l'exposition moyenne enfants et nourrissons à deux familles d'organochlorés (dioxines + PCB et leurs homologues chimiques)10. C'est chez les enfants que cette diminution est la plus marquée, en raison notamment des efforts et contrôles faits pour la qualité du lait et des produits lactés10.
-
-Dans un laboratoire de biologie de l'EPA (Gulf Breeze), un système « pompe-seringue » contrôle le débit précis de dose de trois polluants organochlorés (PCB, DDT et dieldrine) délivrés dans l'eau d'un élevage expérimental et fermé d'huitres, pour étudier les effets de ces polluants
-
-Schéma de principe des phases de la biodégradation aérobie des PCB selon Adriaens P 1994
-
-Schéma de biodégradation anaérobie (en l'absence d'oxygène) des PCB selon Abramowicz 1990
-
-Pose d'étiquette informative sur différents transformateurs ou condensateurs contenant des PCB, en attente de leur décontamination (US Army corps of Engineers)
-
-Image faite au microscope électronique de bactéries du groupe des pseudomonas dont certaines peuvent biodégrader les PCB
-Les PCB sont apparus aux chimistes du début du xxe siècle intéressants pour leurs propriétés diélectriques.
-Les principaux pays producteurs ont été l'Autriche, la Chine, la Tchécoslovaquie, la France, l’Allemagne, l’Italie, le Japon, l'ex-URSS, l’Espagne, le Royaume-Uni et les États-Unis (Aux États-Unis, la Swann Chemical Company (en) a mis au point la fabrication industrielle des PCB. La firme Monsanto a racheté en 1935 la Swann Chemical Company et produit des PCB).
-
-Usages
-Comme isolants électriques presque ininflammables et pour leurs excellentes caractéristiques diélectriques et de conduction thermique, les PCB ont été massivement utilisées des années 1930 aux années 1970 dans :
-
-des transformateurs linkTo:site5.txt  électriques ;
-des condensateurs ;
-des sectionneurs de puissance ;
-des isolateurs, dans les environnements à très haute tension (THT) ; ils étaient alors mélangés à des chlorobenzènes (également toxiques) ;
-des fluides caloporteurs, par exemple dans les environnements à risque d'incendie, dont les navires transportant des carburants (pétrole, gaz) ;
-des fluides hydrauliques en contexte à risque ou de contraintes thermiques (mines…) ;
-des moteurs de pompe ;
-des fours à micro-ondes ;
-comme additifs d’huiles minérales ou de produits de soudures ;
-dans certains adhésifs ;
-dans des peintures ;
-et jusque dans des papiers linkTo:site2.txt  autocopiants.
-Les PCB ont aussi été utilisés comme anesthésiants, et c’est d'ailleurs ce qui a permis de constater qu'ils sont cancérigènes.[réf. nécessaire]
-
-Tonnages
-La quantité totale de PCB non-détruits est inconnue. Il en existe des stocks importants, et un volume très significatif a été diffusé dans l'environnement. À titre d'exemple :
-
-la DGXI de l'Europe a estimé en 1994 qu'il en restait 200 000 tonnes (liquide) dans l'Europe des 15 (rien que venant des transformateurs et condensateurs à détruire). La France (en raison de sa forte électrification et nucléarisation), puis l'Italie et l'Allemagne en détenaient la plus grande quantité (avec respectivement 45 000 t, 45 000 t et 30 000 t) alors que la Grèce, le Portugal et l'Irlande semblaient disposer des plus petites quantités ;
-Environnement Canada a pour sa part estimé en 1993 que le Canada disposait de 172 722 tonnes métriques de matériaux contenant des PCB, dont 95 718 tonnes de terres polluées et 6 265 tonnes métriques de PCB liquide11.
-Contamination environnementale
-L'Union européenne reconnaît manquer de données concernant l'alimentation animale et constatait encore en 2012 que les analyses de laboratoires chargées des contrôles officiels sont souvent imprécises : « bien qu’il soit possible de parvenir à une limite de quantification inférieure, on constate qu’un grand nombre de laboratoires chargés des contrôles officiels appliquent une limite de quantification de 0,5 ng/kg de produit, voire de 1 ng/kg de produit »12 Les sols conservent les POPs durant des décennies ou siècles au moins. Les PCB peuvent y être aéroportés (Les retombées atmosphériques sont significatives à localement importantes13 et sur les feuillages14). Elles contribuent à la pollution à faible dose le plus souvent, mais générale du « fond pédogéochimique »15. Mais (à partir de l'air ou des sols) les PCB semblent surtout véhiculés par l'eau puis rapidement stockés dans les sédiments car peu solubles dans l'eau. Parce que liposolubles, on les trouve ensuite concentrés dans la biomasse animale (bioturbation)15.
-Au début des années 2000, il existe de grandes différences de contamination des sols ; atteignant quatre ordres de grandeur entre les échantillons de sols superficiels du Groenland et ceux de France (de 26 à 97 000 pg de PCB par gramme de sol (sec) selon que les échantillons proviennent du Groenland et de l'Europe continentale (France, Allemagne, Pologne) lors d'une étude récente (2003)15 (congénères/homologues inclus). Les sols de l'hémisphère nord se trouvent largement plus contaminés qu'ailleurs et la quantité des retombées atmosphériques a été estimée (2003) à 21 000 tonnes15.
-
-Les émissions ont beaucoup diminué et leurs concentrations semblent aujourd'hui faibles dans la plupart des pays (de quelques nanogrammes/gramme de sol ou sédiment hormis dans quelques hot-spots d'origine accidentelle : casse ou incendie de transformateur au pyralène par exemple) ou industrielle (jusqu'à plusieurs milligramme/gramme). Mais de nombreuses études montrent qu'ils se sont accumulés dans presque tous les milieux et concentrés dans le gras de nombreuses espèces aquatiques notamment. Cela pose problème pour de nombreuses espèces de mammifères, poissons et oiseaux carnivores ou se nourrissant dans les sédiments. En Europe, on commence à étudier le réseau trophique aquatique via des bioindicateurs ou bioconcentrateurs, par exemple l'anguille d'Europe (très bioaccumulatrice de PCB) ou le barbeau ou la brème qui le sont un peu moins. Ils peuvent être comparés à des espèces peu bioaccumulatrices de PCB (gardon, perche, sandre ou vandoise)5.
-
-En raison de leurs caractéristiques chimiques (liposolubilité notamment) et de leur rémanence (longue durée de vie liée à leur stabilité chimique et leur très faible biodégradabilité), les PCB sont des polluants encore fréquemment trouvés dans l'environnement : à proximité des lieux de production et d'élimination, sur les lieux d'accident, dans les sédiments sur de vastes zones, et par suite dans certaines boues de curage. On cherche à modéliser leur cinétique environnementale, en particulier en mer avec des modèles tridimensionnels numériques (par exemple en Mer Noire16). Les poissons marins et d'eau douce et leurs prédateurs (ex : loutre17, phoque et oiseaux piscivores..) comptent parmi les organismes souvent contaminés. La consommation de poissons semble être la principale voie de contamination pour l'homme18.
-
-Effets sur l'environnement
-Les effets écotoxicologiques des faibles doses de PCB, et des synergies à long terme sont quasiment inconnus. Selon Hélène Budzinski19, écotoxicologue, « les lacunes qu'il nous reste à combler sont périphériques : comprendre l'effet chronique des faibles doses en mélange, savoir précisément d'un point de vue épidémiologique, environnemental, l'impact imputable aux PCB ou en lien avec ces composés mais associés à d'autres contaminants ». Les 209 PCB connus, dont 135 sont présents dans l'environnement, peuvent présenter des sous-produits d'oxydation dont les effets sont encore très peu étudiés.
-
-Les PCB sont bioaccumulables dans le réseau trophique notamment par les poissons gras et de leurs prédateurs dont oiseaux pêcheurs et mammifères marins tels que cétacés.
-Certains animaux prédateurs mobiles et grands migrateurs (phoques et cétacés en particulier) peuvent aussi les « exporter » (phénomène dit de « bioturbation ») dans des régions éloignées des sites pollués, via leurs déplacements et leurs cadavres à cause de la place qu'ils occupent dans la chaîne alimentaire.
-Les anguilles, qui se nourrissent volontiers dans les sédiments et accumulent des graisses lors de leur vie dans les fleuves et les estuaires pour leur future migration, sont particulièrement concernées. Mais des animaux non-gras tels que les amphibiens peuvent aussi en accumuler de grandes quantités. Ainsi des foies de Rana catesbeiana échantillonnées dans 2 sites contaminés par une décharge20 contenaient de 2,33 et 2,26 ppm de PBB (soit jusqu'à près de 50 fois plus que les 0,05 ppm trouvés chez les grenouilles vivant dans un site de référence). Une autre espèce (Rana clamitans R.) avait sur ces sites aussi accumulé des taux élevés de PB (2,37 et 3,88 ppm, respectivement) que ceux du site de référence (0,02 ppm). Aucune variation temporelle des taux de PCB n'a été observée entre 1992 et 1993 chez ces deux espèces. Des PCB ont été recherchés dans le foie de couleuvres d'eau Nerodia sipedon (consommateurs de grenouilles). Les taux en étaient significativement plus élevés (13,70 ppm) dans le bassin versant contaminé que ceux sur le site de déchets lui-même (2,29 ppm) et dans deux sites de référence (2,50 et 1,23 ppm). Comparativement aux grenouilles, la bioaccumulation a été significativement plus élevée chez les couleuvres dans le bassin versant contaminé, mais aucune différence significative n'a été observée dans les concentrations de PCB par rapport à la taille ou au sexe ou à la masse corporelle des grenouilles et des serpents. Des PCB ont aussi été détectés dans les œufs de grenouilles et de serpents. Les résultats de cette étude fournissent des données de base et de documenter la bioaccumulation des résidus de PCB dans les tissus de grenouilles et de serpents. Des PCB ont ensuite aussi été trouvés dans le plasma de couleuvres nord-américaines21
-Les effets sur la reproduction, la survie, la croissance, le développement, et la dynamique des populations des amphibiens ou serpents contaminés dans les habitats pollués sont encore inconnus22.
-
-Exposition humaine
-
-Les PCB de type dioxine23
-Elle est apparue avec le développement de l'industrie du chlore et des organochlorés. Elle a été maximale à la fin du xxe siècle et décline, au moins dans certains pays. Ainsi, en Europe (UE-26), selon l'Autorité européenne de sécurité des aliments (AESA), pour 61 de 68 groupes observés en Europe, on observe (de 2000 à 2010) une diminution de l'exposition alimentaire, mais cette amélioration varie beaucoup (de 2 à 75,6 %) selon le groupe de population observé)10.
-
-Les matières animales grasses sont la première source d'exposition alimentaire pour l'Homme. Les taux de PCB sont principalement liés à la consommation de poisson24, mais d'autres facteurs sont importants dont la consommation de lait, premier aliment de la vie, souvent très consommé dans l'enfance. Pour cette raison, l’alimentation des habitants de l'archipel espagnol des Canaries a été étudiée par l'université de Las Palmas, de manière détaillée. Ils comptent en effet parmi ceux qui boivent le plus de lait en Espagne et en Europe, alors que - l'île ayant une balance commerciale agricole très déficitaire - l'essentiel du lait y est importé25.
-Les pesticides organochlorés et PCB ont été quantifiés dans 26 marques de lait (16 issues de l'agriculture intensive et 10 issus de marques « bio »)25. Résultats (publiés en 2012) : de l'hexachlorobenzène, du trans-chlordane et un PCB (PCB153) étaient présents dans presque tous les échantillons, indépendamment du type de lait ; Les taux de pesticides organochlorés étaient « très faibles », et plus bas dans les laits « bio » que dans ceux issus de l'élevage conventionnel, avec une dose journalière ingérée inférieure à la dose journalière tolérable (DJT, déterminée par les agences internationales), mais dans ces mêmes laits, si les taux de PCB étaient également « très faibles », contrairement aux pesticides organochlorés, ils présentaient des teneurs plus élevées dans les laits « bio » que dans les laits « conventionnels »25. Les chercheurs ont en outre été surpris de trouver dans les deux types de lait des taux de PCB de type dioxine (PCB-DL) atteignant 25 pg TEQ-OMS par gramme de graisse dans le percentile 75, mettant en évidence que plusieurs marques étaient « fortement contaminés par ces substances toxiques », au point que les personnes consommant les marques de lait les plus contaminés peuvent chaque jour largement dépasser la dose journalière recommandée dans l'Union européenne (2 pg WHO-TEQ par kg b.w. par jour), ce qui est « préoccupant si l'on considère les effets bien connus pour la santé exercée par les composés de type dioxine » alertent les chercheurs25. De plus, l'embryon et le fœtus peuvent déjà avoir été excessivement exposés à ces produits in utero, y compris dans ce même archipel des Canaries, bien que ce territoire soit très éloigné des sources habituelles industrielles ou agricoles d'organochlorés, comme cela a été montré en 2009 par une étude ayant porté sur cent femmes enceintes de l'île de Tenerife (l'une des Îles Canaries)26. On avait aussi constaté dans ces îles que le sérum dosé chez 1259 femmes enceintes par une étude de 201124) contenait du PCB153 (dans 95 % des cas24). En 2012 une nouvelle étude a montré que de nombreux fromages (bio, y compris) étaient contaminés27.
-
-De manière générale, les taux de pesticides organochlorés augmentent chez les femmes enceintes avec l'âge, mais il chute chez les femmes qui ont allaité sur une durée de 12 mois cumulés ou plus24, probablement en exposant alors un peu plus l'enfant allaité.
-L'indice de masse corporelle était positivement associé aux taux de pesticides organochlorés dans les sérums de femmes enceintes, mais inversement proportionnel au taux de PCB24.
-
-En France, selon l'InVS (14 mars 2011), d'après les analyses faites en 2006-2007 chez 3 100 personnes dans le cadre du programme national nutrition santé (PNNS), le sang des français contient beaucoup plus de PCB que celui des Allemands et 4 à 5 fois plus que celui des Américains28. 3,6 % des femmes en âge de procréer présentent une concentration en PCB totaux supérieure au seuil de 700 ng/g de lipides défini par l’Agence française de sécurité sanitaire des aliments (Afssa) et 0,4 % des autres adultes présentent une concentration supérieure au seuil de 1 800 ng/g de lipides28.
-En 2012, l'AESA a suggéré que les statistiques européennes manquaient cependant de fiabilité et que la stratégie européenne d'échantillonnage des aliments et des groupes de consommateurs devrait être redéfinie, avec en attendant une utilisation prudente des statistiques européennes, pour les raisons suivantes29 :
-
-l'amélioration temporelle observée peut certes résulter de mesures européennes de gestion du risque et de réduction de l'exposition de la population européenne, mais des méthodes analytiques plus précises, ainsi que des variations temporelles dans les méthodes et plans d'échantillonnage pourraient aussi être en cause, met en garde l'AESA29 ;
-certaines données anciennes ont peut-être conduit à surestimer la contamination alimentaire réelle mais, inversement, la surreprésentation de graisses végétales et la sous-représentation (graisses animales et certains aliments composés dont gibier à poils ou à plume et certains poissons ou encore les liants et additifs anti-agglomérants30) ou l'exclusion de certains aliments des plans d'évaluation de l'exposition a également conduit à une sous-estimation de l'exposition totale pour certains groupes de population29 ;
-ces statistiques européennes ont fusionné celles de tous les pays sans pondération selon leur représentativité, sans ajustement au vu des estimations des tendances de contamination. L'exposition estimée pourrait ne pas refléter la situation réelle de certains groupes de population29. De plus, certains pays n'ont communiqué des données que pour certains groupes d'aliments ou pour certains types de dioxines ou PCB (l'Estonie, la Lituanie et le Luxembourg n'ont fourni des données que pour les produits de la pêche29. Les autres pays ont couvert plusieurs groupes d'aliments (poissons, viandes) mais aucun des pays n'a couvert tous les groupes d'aliments d'origine animale définis par la législation européenne)29.
-Lors des études comparatives, il convient de bien prendre en compte l'unité exprimant les résultats (par exemple en matières grasses, en poids total, sec ou humidité), car elle affecte considérablement l'estimation du risque et de l'exposition réelle.
-
-Normes
-La dose tolérable hebdomadaire (Tolerable Weekly Intake ou TWI) a été fixée à 14 pg TEQ/kg b.w en Europe. En 2010, selon l'AESA, elle était dépassée chez 1 à 52,9 % de la population, selon les groupes étudiés10.
-En Europe, une directive31 interdit l’utilisation des produits destinés aux aliments pour animaux dont les teneurs en substances indésirables dépassent certaines teneurs (définies dans son annexe I).
-Gestion du risque
-Une attention particulière est à porter aux enfants, chez qui la première source de contamination est le lait et les produits laitiers10, alors que les poissons, la viande et les fruits de mer le deviennent chez les adolescents et jusqu'à la vieillesse.
-
-De façon générale, la gestion privée, publique et règlementaire du dossier PCB en Europe a été basée sur la réduction à la source et la destruction des stocks connus des autorités. Cette approche semble atteindre ses limites, au vu de la quantité de produits mise en circulation, laquelle continue à se bioaccumuler dans les organismes vivants et qui, pour partie, restera longtemps susceptible de continuer à circuler.
-Par exemple, le canton suisse Fribourg a mis en évidence une contamination de la rivière par des PCB et/ou dioxines émanant d'une décharge désaffectée La Pila située à Hauterive en bordure de rivière. Cette ancienne décharge est aujourd'hui enforestée et abrite, semble-t-il, des déchets qui provenaient d’une usine de condensateurs. Plus de 4 000 décharges de ce type ont été recensées en Suisse, dont une centaine dans le seul canton de Fribourg32
-
-Ce type de produit, quand il est recherché, est trouvé dans de nombreux bassins et estuaires et ports estuariens car l'estuaire est un lieu « normal» de dépôt et d'accumulation de contaminants transportés par les fleuves ou leurs planctons, algues et animaux (via les phénomènes de bioturbation et de bioconcentration). En aval des bassins versants urbanisés et industrialisés, les estuaires risquent d'être presque tous concernés. Au vu du nombre de productions alimentaires qui vont devoir gérer cette problématique durant une longue période, de nombreux acteurs attendent une position claire des instances européennes qui ont coordonné la gestion de cette problématique, et que les estuaires soient de manière urgente reconnus comme des lieux particuliers nécessitant un suivi et une gestion prenant en compte les faits, qui doivent être accessibles.
-
+playstation
+final fantasy
+playstation portable
+ps vita
+uncharted
+ linkTo:site3.txt tomb raider
+ps3
+ps4
+wipeout
+gran turismo
+jeux linkTo:site1.txt  videos
+jeux video
+gta linkTo:site2.txt 
