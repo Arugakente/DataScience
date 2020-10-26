@@ -3,7 +3,7 @@ multiCount = true;
 
 a = 0.85;
 
-files = glob("C:/Users/Kente/Documents/DataScienceP1/Dataset/processed/*.txt");
+files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
 
 M = zeros(numel(files),numel(files));
 
