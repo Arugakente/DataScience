@@ -97,3 +97,20 @@ for i=2:size(M)(1)
 endfor 
 
 legend(files');
+
+readed = "";
+
+do
+  readed = input("Keywords to search (\\quit to quit) : ","s");
+  
+  matchedSites = zeros(1,numel(files));
+  if !strcmp(readed,"\\quit")
+    readed = strsplit(readed);
+    for i=1:numel(readed)
+      if isKey(invertedIndex,readed{i})
+        matchedSites = or(matchedSites,invertedIndex(readed{i}));
+      endif
+    endfor
+    disp(matchedSites);
+  endif
+until strcmp(readed,"\\quit")

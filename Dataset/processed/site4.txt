@@ -2,10 +2,10 @@ xbox
 xbox 360
 fable
 forza
-xbox one
- linkTo:site2.txt xbox series x
-xbox live
-dead linkTo:site4.txt  rising
+xbox linkTo:site1.txt  one
+xbox series x
+ linkTo:site2.txt xbox live
+dead rising
 gears of wars
 halo
 jeux videos

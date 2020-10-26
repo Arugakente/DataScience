@@ -3,11 +3,11 @@ final fantasy
 playstation portable
 ps vita
 uncharted
- linkTo:site3.txt tomb raider
+tomb raider
 ps3
 ps4
 wipeout
 gran turismo
-jeux linkTo:site1.txt  videos
+jeux videos
 jeux video
-gta linkTo:site2.txt 
+gta linkTo:site3.txt  linkTo:site2.txt 

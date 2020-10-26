@@ -1,5 +1,5 @@
 megadrive
- linkTo:site1.txt master linkTo:site4.txt  system
+ linkTo:site2.txt master linkTo:site1.txt  system
 sonic
 knuckles
 tails
@@ -8,6 +8,6 @@ sega saturn
 dreamcast
 alex kid
 golden axe
-jeux videos
+ linkTo:site4.txt jeux videos
 jeux video
- linkTo:site4.txt bomberman
+bomberman linkTo:site4.txt  linkTo:site1.txt 
