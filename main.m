@@ -1,8 +1,9 @@
+#program parameters
 multiCount = true;
-
+keywordCount = false;
 a = 0.85;
 
-files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
+files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/smallExample4WS/processed/*.txt");
 
 n = ones(numel(files),1);
 
@@ -13,6 +14,9 @@ invertedIndex = containers.Map();
 stopwordsMap = containers.Map();
 stopwordsMap("") = 0;
 
+#list of site name
+labels = [];
+
 %chagement de la liste des stopwords
 stopwords = textread("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/stopwords.txt", "%s");
 for i=1:numel(stopwords)
@@ -21,6 +25,8 @@ for i=1:numel(stopwords)
 endfor
 
 for i=1:numel(files)
+  #storing filename for graph labeling and result displaying
+  labels{i} = substr(files{i},rindex(files(i),"/")+1);
   currentFile = textread(files{i}, "%s");
   linkFrom = str2num(substr(files{i},rindex(files{i},"/") + 5, rindex(files{i},".") - (rindex(files{i},"/") + 5)));
   for j=1:numel(currentFile)
@@ -95,22 +101,109 @@ hold on;
 for i=2:size(M)(1)
   plot(0:T, x(i,:));
 endfor 
-
-legend(files');
+legend(labels');
+disp(n)
 
 readed = "";
 
+#request section over the loaded datas. 
+#main criterion number of keyword match(toggleable)
+#for site with same keyword match -> verification with the pagerank to sort
 do
   readed = input("Keywords to search (\\quit to quit) : ","s");
   
-  matchedSites = zeros(1,numel(files));
+  keywordMatch = zeros(1,numel(files));
+  ranking = zeros(1,numel(files));
+  
   if !strcmp(readed,"\\quit")
     readed = strsplit(readed);
     for i=1:numel(readed)
-      if isKey(invertedIndex,readed{i})
-        matchedSites = or(matchedSites,invertedIndex(readed{i}));
+      currentWord = tolower(readed{i});
+      if isKey(invertedIndex,currentWord)
+        if(keywordCount)
+          keywordMatch += invertedIndex(currentWord);
+        else
+          keywordMatch = or(keywordMatch,invertedIndex(currentWord));
+        endif
       endif
     endfor
-    disp(matchedSites);
+    disp(keywordMatch);
+    
+    if(keywordCount)
+      for i=1:numel(files)
+        stored = false;
+        updatePoint = 0;
+        if keywordMatch(i) != 0
+          j=1;
+          while j<=numel(files) && !stored
+            if ranking(j) == 0
+              ranking(j)=i;
+              stored = true;
+            elseif keywordMatch(ranking(j))<keywordMatch(i) || (keywordMatch(ranking(j))==keywordMatch(i)&&n(ranking(j))<n(i))
+              updatePoint = j;
+              stored = true;
+            else
+             j+=1;
+            endif
+          endwhile
+          #insertion if necessary
+          if updatePoint !=0
+            tmp1 = i;
+            tmp2 = ranking(updatePoint);
+            j = updatePoint;
+            stored = false;
+            while j<=numel(files) && !stored
+              if ranking(j) == 0 || j == numel(files)
+                ranking(j) = tmp1;
+                stored =true;
+              else
+                ranking(j) = tmp1;
+                tmp1 = tmp2;
+                tmp2 = ranking(j+1);
+              endif
+              j+=1;
+            endwhile
+          endif 
+        endif
+      endfor
+    else
+      for i=1:numel(files)
+        stored = false;
+        updatePoint = 0;
+        if keywordMatch(i) != 0
+          j=1;
+          while j<=numel(files) && !stored
+            if ranking(j) == 0
+              ranking(j)=i;
+              stored = true;
+            elseif n(ranking(j))<n(i)
+              updatePoint = j;
+              stored = true;
+            else
+             j+=1;
+            endif
+          endwhile
+          #insertion if necessary
+          if updatePoint !=0
+            tmp1 = i;
+            tmp2 = ranking(updatePoint);
+            j = updatePoint;
+            stored = false;
+            while j<=numel(files) && !stored
+              if ranking(j) == 0 || j == numel(files)
+                ranking(j) = tmp1;
+                stored =true;
+              else
+                ranking(j) = tmp1;
+                tmp1 = tmp2;
+                tmp2 = ranking(j+1);
+              endif
+              j+=1;
+            endwhile
+          endif 
+        endif
+      endfor
+    endif 
+    disp(ranking)
   endif
 until strcmp(readed,"\\quit")
