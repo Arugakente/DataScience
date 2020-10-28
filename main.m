@@ -1,6 +1,6 @@
 #program parameters
 multiCount = true;
-keywordCount = false;
+keywordCount = true;
 a = 0.85;
 
 files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/smallExample4WS/processed/*.txt");
@@ -30,10 +30,7 @@ for i=1:numel(files)
   currentFile = textread(files{i}, "%s");
   linkFrom = str2num(substr(files{i},rindex(files{i},"/") + 5, rindex(files{i},".") - (rindex(files{i},"/") + 5)));
   for j=1:numel(currentFile)
-    disp(i)
-    disp(numel(files))
-    disp(j)
-    disp(numel(currentFile))
+    disp(strcat("file: ",num2str(i),"/",num2str(numel(files))," | word: ",num2str(j),"/",num2str(numel(currentFile))))
     currentWord = currentFile{j};
     if isempty(regexp(currentWord,"linkTo:.*")) == 0 %On traite le lien
       linkTo = str2num(substr(currentWord,index(currentWord,":")+5,index(currentWord,".")-(index(currentWord,":")+5)));
@@ -127,7 +124,6 @@ do
         endif
       endif
     endfor
-    disp(keywordMatch);
     
     if(keywordCount)
       for i=1:numel(files)
@@ -204,6 +200,11 @@ do
         endif
       endfor
     endif 
-    disp(ranking)
+    disp("résultats de la recherche :");
+    for i=1:numel(ranking)
+      if(ranking(i) != 0)
+        disp(strcat(num2str(i),":",labels{ranking(i)}))
+      endif
+    endfor
   endif
 until strcmp(readed,"\\quit")
