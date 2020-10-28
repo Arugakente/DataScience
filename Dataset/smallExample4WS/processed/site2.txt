@@ -1,0 +1,13 @@
+megadrive
+ linkTo:site2.txt master linkTo:site1.txt  system
+sonic
+knuckles
+tails
+game gear
+sega saturn
+dreamcast
+alex kid
+golden axe
+ linkTo:site4.txt jeux videos
+jeux video
+bomberman linkTo:site4.txt  linkTo:site1.txt 

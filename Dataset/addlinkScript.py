@@ -19,7 +19,7 @@ for filename in os.listdir(inputDirectory) :
 
     outputFile = ""
   
-    currentProbability = 0.05
+    currentProbability = 0.25
     while currentLine:
         currentLine = content.readline()
 

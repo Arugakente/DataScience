@@ -1,0 +1,13 @@
+nintendo
+ linkTo:site2.txt mario
+ linkTo:site2.txt luigi
+yoshi
+super nintendo
+snes
+ linkTo:site3.txt nintendo entertainement system
+gameboy
+nintendo ds
+nintendon't
+jeux videos
+jeux video
+bomberman linkTo:site2.txt  linkTo:site4.txt 
