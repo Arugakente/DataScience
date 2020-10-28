@@ -3,7 +3,7 @@ multiCount = true;
 keywordCount = true;
 a = 0.85;
 
-files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/smallExample4WS/processed/*.txt");
+files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/average15WS/processed/*.txt");
 
 n = ones(numel(files),1);
 
@@ -50,11 +50,11 @@ for i=1:numel(files)
         %nettoyage des mots   
         if isKey(invertedIndex,currentWord)
           tmp = invertedIndex(currentWord);
-          tmp(linkFrom) = 1;
+          tmp(i) = 1;
           invertedIndex(currentWord) = tmp;
         else %On rajoute le mot � la liste
           tmp = zeros(1,numel(files));
-          tmp(linkFrom) = 1;
+          tmp(i) = 1;
           invertedIndex(currentWord) = tmp;
         endif
      endif
