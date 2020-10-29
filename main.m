@@ -1,12 +1,14 @@
-#program parameters
+#Program Parameters
 multiCount = true;
 keywordCount = true;
 a = 0.85;
+epsilon = 0.001;
 
-files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/average15WS/processed/*.txt");
+%files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/average15WS/processed/*.txt");
+files = glob("C:/Users/Kente/Documents/DataScienceP1/Dataset/smallExample4WS/processed/*.txt"); 
+
 
 n = ones(numel(files),1);
-
 M = zeros(numel(files),numel(files));
 
 invertedIndex = containers.Map();
@@ -14,26 +16,35 @@ invertedIndex = containers.Map();
 stopwordsMap = containers.Map();
 stopwordsMap("") = 0;
 
-#list of site name
+#List of site name
 labels = [];
 
-%chagement de la liste des stopwords
-stopwords = textread("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/stopwords.txt", "%s");
+%Stopwords list loading
+%stopwords = textread("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/stopwords.txt", "%s");
+stopwords = textread("C:\\Users\\Kente\\Documents\\DataScienceP1\\stopwords.txt", "%s");
+
 for i=1:numel(stopwords)
   stopwordsMap(stopwords{i}) = 0;
-  disp(stopwords{i});
+  %disp(stopwords{i});
 endfor
 
+%Slash depends on the OS
+slash = "\\";
+%slash = "/";
+
 for i=1:numel(files)
-  #storing filename for graph labeling and result displaying
-  labels{i} = substr(files{i},rindex(files(i),"/")+1);
+  #Storing filename for graph labeling and result displaying
+  labels{i} = substr(files{i},rindex(files(i),slash)+1);
   currentFile = textread(files{i}, "%s");
-  linkFrom = str2num(substr(files{i},rindex(files{i},"/") + 5, rindex(files{i},".") - (rindex(files{i},"/") + 5)));
+  linkFrom = str2num(substr(files{i},rindex(files{i},slash) + 5, rindex(files{i},".") - (rindex(files{i},slash) + 5)));
+  
   for j=1:numel(currentFile)
-    disp(strcat("file: ",num2str(i),"/",num2str(numel(files))," | word: ",num2str(j),"/",num2str(numel(currentFile))))
+    disp(strcat("file: ",num2str(i),slash,num2str(numel(files))," | word: ",num2str(j),slash,num2str(numel(currentFile))))
     currentWord = currentFile{j};
-    if isempty(regexp(currentWord,"linkTo:.*")) == 0 %On traite le lien
+    
+    if isempty(regexp(currentWord,"linkTo:.*")) == 0 %Link processing
       linkTo = str2num(substr(currentWord,index(currentWord,":")+5,index(currentWord,".")-(index(currentWord,":")+5)));
+      
       if linkTo != linkFrom
         if multiCount
           M(linkFrom,linkTo)+=1;
@@ -41,22 +52,26 @@ for i=1:numel(files)
           M(linkFrom,linkTo)=1;
         endif
       endif
-    else %On traite le mot
+      
+    else %Words processing
       currentWord = tolower(currentWord);
       currentWord = strtrim(currentWord);
       currentWord = regexprep(currentWord,'[\.\,\(\)«»—]','');
-      #retrait des mots non porteurs de sens (via une liste de mot préchargée) et élimination des composantes n'étant pas des mots.
+      
+      %Words cleaning
       if !isKey(stopwordsMap,currentWord) && !isempty(currentWord) && isempty(regexp(currentWord,'[!@#\$%\^&*()_+\=\[\]{};:"\\|,.<>\/?]|[0-9]'))
-        %nettoyage des mots   
-        if isKey(invertedIndex,currentWord)
+        
+        if isKey(invertedIndex,currentWord) %Already on list
           tmp = invertedIndex(currentWord);
           tmp(i) = 1;
           invertedIndex(currentWord) = tmp;
-        else %On rajoute le mot � la liste
+          
+        else %Not in the list
           tmp = zeros(1,numel(files));
           tmp(i) = 1;
           invertedIndex(currentWord) = tmp;
         endif
+        
      endif
     endif
   endfor
@@ -64,48 +79,57 @@ endfor
 
 disp(M);
 
+%Markov matrix creation
 for i=1:size(M)(1)
   somme = sum(M(:,i));
   
   for j=1:size(M)(2)
     if somme == 0
-      M(j,i) = 1 / size(M)(1); %pour bien avoir un syst�me de Markov
+      M(j,i) = 1 / size(M)(1); %To ensure we have a Markov system 
     else
-      M(j,i) = M(j,i)/somme; %normalisation
+      M(j,i) = M(j,i)/somme; %Normalization
     endif
-    M(j,i) = a*M(j,i) + 1*(1-a) / size(M)(1); %formule matrice de google
+    M(j,i) = a*M(j,i) + 1*(1-a) / size(M)(1); %Google Matrix formula
   endfor
   
-  disp(sum(M(:,i)));
+  %disp(sum(M(:,i)));
 endfor
 
 disp(M);
 
-T = 10;
+T = 30; %Delta time buffer
 
 x = zeros(size(M)(1), T);
 x(:,1) = n;
 
+maxTime = T;
+
+%Markov simulation
 for i=1:T
     n = M*n;
     x(:,i+1) = n;
+    
+    if norm(x(:,i+1)-x(:,i)) < epsilon
+      maxTime = i+1;
+      break;
+    endif
 endfor
 
 figure(1);
-plot(0:T, x(1,:));
+plot(0:maxTime-1, x(1,1:maxTime));
 hold on;
 
 for i=2:size(M)(1)
-  plot(0:T, x(i,:));
+  plot(0:maxTime-1, x(i,1:maxTime));
 endfor 
 legend(labels');
 disp(n)
 
 readed = "";
 
-#request section over the loaded datas. 
-#main criterion number of keyword match(toggleable)
-#for site with same keyword match -> verification with the pagerank to sort
+#Request section over the loaded datas (seach engine)
+#    Main criterion: number of keyword match(toggleable)
+#    For site with same keyword match: verification with the pagerank to sort
 do
   readed = input("Keywords to search (\\quit to quit) : ","s");
   
@@ -114,12 +138,13 @@ do
   
   if !strcmp(readed,"\\quit")
     readed = strsplit(readed);
+    
     for i=1:numel(readed)
       currentWord = tolower(readed{i});
       if isKey(invertedIndex,currentWord)
-        if(keywordCount)
-          keywordMatch += invertedIndex(currentWord);
-        else
+        if(keywordCount)    %Adding pages that contains one of our words
+          keywordMatch += invertedIndex(currentWord); 
+        else                %Storing pages that contains every words
           keywordMatch = or(keywordMatch,invertedIndex(currentWord));
         endif
       endif
@@ -200,10 +225,10 @@ do
         endif
       endfor
     endif 
-    disp("résultats de la recherche :");
+    disp("Search results:");
     for i=1:numel(ranking)
       if(ranking(i) != 0)
-        disp(strcat(num2str(i),":",labels{ranking(i)}))
+        disp(strcat(num2str(i),": ",labels{ranking(i)}))
       endif
     endfor
   endif
