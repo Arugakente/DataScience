@@ -1,12 +1,14 @@
 #Program Parameters
 multiCount = true;
 keywordCount = true;
-a = 0.85;
+a = 0.60;
 epsilon = 0.001;
 
-%files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/average15WS/processed/*.txt");
-files = glob("C:/Users/Kente/Documents/DataScienceP1/Dataset/smallExample4WS/processed/*.txt"); 
 
+
+
+workspace = pwd();
+files = glob(strcat(workspace,"/Dataset/smallExample4WS/processed/*.txt")); 
 
 n = ones(numel(files),1);
 M = zeros(numel(files),numel(files));
@@ -20,17 +22,31 @@ stopwordsMap("") = 0;
 labels = [];
 
 %Stopwords list loading
-%stopwords = textread("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/stopwords.txt", "%s");
-stopwords = textread("C:\\Users\\Kente\\Documents\\DataScienceP1\\stopwords.txt", "%s");
+stopwords = textread("stopwords.txt", "%s");
 
 for i=1:numel(stopwords)
   stopwordsMap(stopwords{i}) = 0;
   %disp(stopwords{i});
 endfor
 
-%Slash depends on the OS
-slash = "\\";
-%slash = "/";
+
+readed = "";
+slash = "/";
+do
+  readed = input("Is Windows your OS ? (Y/N) : ","s");
+  if strcmp(readed,"Y")
+    slash = "\\";
+    break;
+  else
+    if strcmp(readed,"N")
+      break;
+    else 
+      disp("Erreur, veuillez réessayer.");
+    endif
+  endif
+until (strcmp(readed,"Y") || strcmp(readed,"N"))
+
+
 
 for i=1:numel(files)
   #Storing filename for graph labeling and result displaying
@@ -79,7 +95,10 @@ endfor
 
 disp(M);
 
+
+
 %Markov matrix creation
+
 for i=1:size(M)(1)
   somme = sum(M(:,i));
   
@@ -104,6 +123,7 @@ x(:,1) = n;
 
 maxTime = T;
 
+
 %Markov simulation
 for i=1:T
     n = M*n;
@@ -123,20 +143,25 @@ for i=2:size(M)(1)
   plot(0:maxTime-1, x(i,1:maxTime));
 endfor 
 legend(labels');
-disp(n)
+disp(n);
 
-readed = "";
+
+
+
 
 #Request section over the loaded datas (seach engine)
 #    Main criterion: number of keyword match(toggleable)
 #    For site with same keyword match: verification with the pagerank to sort
+
+readed = "";
+
 do
-  readed = input("Keywords to search (\\quit to quit) : ","s");
+  readed = input("Keywords to search (/quit to quit) : ","s");
   
   keywordMatch = zeros(1,numel(files));
   ranking = zeros(1,numel(files));
   
-  if !strcmp(readed,"\\quit")
+  if !strcmp(readed,"/quit")
     readed = strsplit(readed);
     
     for i=1:numel(readed)
@@ -232,4 +257,4 @@ do
       endif
     endfor
   endif
-until strcmp(readed,"\\quit")
+until strcmp(readed,"/quit")
