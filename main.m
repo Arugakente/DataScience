@@ -3,7 +3,7 @@ multiCount = true;
 keywordCount = true;
 a = 0.85;
 
-files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/average15WS/processed/*.txt");
+files = glob("/Users/guillaume/Documents/Travail/2020-2021/data_science/Projets/DataScienceP1/Dataset/processed/*.txt");
 
 n = ones(numel(files),1);
 

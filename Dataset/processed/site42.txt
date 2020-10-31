@@ -1,0 +1,24 @@
+Des sites internet français attaqués par des «hackers musulmans»
+Une vague de «cyberattaques en défiguration» a frappé diverses structures ce dimanche.
+
+ linkTo:site48.txtPar Samuel Kahn
+Publié le 26 octobre 2020 à 19:15, mis à jour le 26 octobre 2020 à 20:19
+Un camping, un fabricant de matériaux isolants, la bibliothèque d’un collège de Seine-Saint-Denis figurent parmi les sites piratés dimanche 25 octobre 2020.
+Un camping, un fabricant de matériaux isolants, la bibliothèque d’un collège de Seine-Saint-Denis figurent parmi les sites piratés dimanche 25 octobre 2020. 85856534/RVNW - stock.adobe.com
+Dimanche soir, des pirates informatiques ont remplacé la page d’accueil de plusieurs dizaines de sites internet français par un avertissement: «Ceux qui maltraitent le messager d’Allah doivent être punis.» Ce message, accompagné d’une photographie d’Emmanuel Macron et d’un appel au boycott des produits français, laisse peu de doute quant à l’intention de ses auteurs: porter sur le web les protestations émanant de plusieurs pays musulmans, dont la Turquie, suite aux propos du président de la République sur la liberté d’expression.
+
+À LIRE AUSSI : Erdogan mobilise les islamistes contre la France
+Les sites touchés appartiennent à des structures aussi diverses qu’un camping, un fabricant de matériaux isolants, ou encore la bibliothèque d’un collège de Seine-Saint-Denis. Plutôt confidentiels, ils ont sans doute été visés par opportunisme. Il est en effet plus facile pour des pirates de rechercher des cibles vulnérables que de s’attaquer à un site de groupe plus établi, potentiellement mieux protégé. Aucun site officiel n’a été touché. Dès les premières attaques, le gouvernement a invité les entreprises à s’en prémunir en mettant à jour leurs systèmes informatiques et en changeant leurs mots de passe.
+
+La plupart des messages sont signés par des groupes de pirates en provenance du Bangladesh. D’autres le sont par des «pirates algériens». Mais cela ne signifie pas forcément qu’ils y résident. Les attaques linkTo:site41.txt sont d’ailleurs revendiquées plus largement par des «hackers musulmans contre la France».
+
+Leur mode d’action, connu sous le nom de défiguration, consiste à pénétrer l’infrastructure d’un site web pour en modifier l’apparence. Simple à mettre en œuvre, il peut priver son propriétaire de revenus si son activité dépend de cette plateforme en ligne.
+
+Sur les sites touchés, les hackers annoncent une « apocalypse » pour l’internet français et appellent d’autres pirates à les rejoindre
+Mais il a également un effet psychologique sur les internautes, exposés malgré eux au message des pirates. Dans le cas présent, ces derniers menacent de continuer leurs actions «jusqu’à ce que la France demande pardon». De plus, ils préviennent que cette attaque n’est qu’une première vague. Sur les sites touchés, les hackers annoncent une «apocalypse» pour l’internet français et appellent d’autres pirates à les rejoindre.
+
+Cette offensive informatique n’est pas sans rappeler celle qui avait suivi l’attentat contre Charlie Hebdo en 2015. Dans les jours qui ont suivi ce drame, des centaines de sites français ont vu leur page d’accueil remplacée par des messages vindicatifs envers la France et les caricatures de Mahomet. À l’époque, on avait parlé de «cyberdjihad».
+
+Une guerre en ligne qui déborde aujourd’hui sur les réseaux sociaux. L’attaque de ce week-end a ainsi été accompagnée d’un flot de messages haineux sur les pages Facebook de TF1. Certains menaçaient la France tandis que d’autres se réjouissaient de la mort de Samuel Paty. Le nombre de messages postés et leur fréquence laisse penser qu’il s’agissait d’une offensive automatisée grâce à des programmes informatiques, sans qu’il soit possible de la relier à celle qui a touché plusieurs sites internet dimanche.
+
+À VOIR AUSSI - Les plateformes de signalement sont-elles inutiles face à la haine en ligne?
