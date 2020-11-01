@@ -28,15 +28,20 @@ ni = sum(N,2);
 nj = sum(N,1);
 n = sum(sum(N,2),1);
 
-U = (ni * nj) / n;
+U = (ni .* nj) / n;
 
-%chi = size(N)(2);
+chi = zeros(size(N)(2), 1);
 for j=1:size(N)(2)
-  %chi = sum( ( ((N(:,j))-U(:,j)) / sqrt(U(:,j)) )^2 );
+  chi(j) = sum(  (((N(:,j))-U(:,j))./sqrt(U(:,j))) .* (((N(:,j))-U(:,j))./sqrt(U(:,j)))  );
 endfor
-%chi *= 1/(size(N)(1)-1);
+chi *= 1/(size(N)(1)-1);
+
+figure(1);
+plot(1:size(chi), chi);
+
 
 X = (N-U) ./ sqrt(U); %X matrix for ACP computing
-disp(X);
+%disp(X);
+
 
 %ACP
