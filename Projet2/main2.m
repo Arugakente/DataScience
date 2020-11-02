@@ -48,9 +48,9 @@ X = (N-U) ./ sqrt(U); %X matrix for ACP computing
 disp("ACP DEBUG HERE")
 
 #for easier debug :
-#X = X(:,[1:30]);
-X = X(:,[2,3,8,1]);
-#X = X(:,[2,6,7,8,5,1]);
+#X = X(:,[10,11,12,13]);
+#X = X(:,[6,24]);
+#X = X(:,[6,2,7,10,1,5]);
 #disp(X);
 
 #calcul de la matrice variance/covariance:
@@ -64,42 +64,49 @@ scatter(X(:,1),X(:,2))
 figure(3)
 scatter(X(:,3),X(:,4))
 
+Xred = zeros(rows(X),columns(X));
+Xnorm = zeros(rows(X),columns(X));
+
+
 for i=1:columns(X)
-   X(:,i)=(X(:,i)-moy(i))/Etype(i);
+   Xred(:,i)=(X(:,i)-moy(i));
+   Xnorm(:,i)=Xred(:,i)/Etype(i);
 endfor
 
 #verification de la standardisation :
 #calcul de la matrice variance/covariance:
-disp("V")
+disp("Matrice de covariance")
+covariance = cov(Xred);
+disp(covariance);
+disp("Matrice de corrélation")
 #V=(1/rows(X)).*(X'*X);
-V=cov(X);
+V=cov(Xnorm);
 disp(V);
 disp("std dev");
-disp(std(X));
+disp(std(Xnorm));
 disp("avg");
-disp(mean(X));
+disp(mean(Xnorm));
 disp("X standardized");
-disp(X);
+disp(Xnorm);
 
 figure(4)
-scatter(X(:,1),X(:,2))
+scatter(Xnorm(:,1),Xnorm(:,2))
 figure(5)
-scatter(X(:,3),X(:,4))
+scatter(Xnorm(:,3),Xnorm(:,4))
 
-[E,D] = eig(V);
+[E,D] = eig(Xnorm'*Xnorm);
 #V = E * ((D/rows(X)).^(1/2));
-disp(columns(X))
+disp(columns(Xnorm))
 
 infoTot = sum(diag(D));
 percentInfo = (diag(D)/infoTot)*100;
 
+disp("eigenValues");
 disp(D);
+disp("eigenVectors");
+disp(E);
 figure(6);
+bar(diag(D));
+figure(7);
 bar(percentInfo);
-
-
-figure(7)
-scatter(X(:,1),X(:,2))
-figure(8)
-scatter(X(:,2),X(:,1))
 
