@@ -34,35 +34,34 @@ chi = zeros(size(N)(2), 1);
 for j=1:size(N)(2)
   chi(j) = sum(  (((N(:,j))-U(:,j))./sqrt(U(:,j))) .* (((N(:,j))-U(:,j))./sqrt(U(:,j)))  );
 endfor
-chi *= 1/(size(N)(1)-1);
+chi *= 1/(size(N)(1)-1)
 
 figure(1);
-plot(1:size(chi), chi);
+bar(1:size(chi), chi);
 
 
 X = (N-U) ./ sqrt(U); %X matrix for ACP computing
 %disp(X);
-
 
 %ACP
 
 disp("ACP DEBUG HERE")
 
 #for easier debug :
-#X = X(:,[1,2,3,42]);
+#X = X(:,[1:30]);
+X = X(:,[2,3,8,1]);
+#X = X(:,[2,6,7,8,5,1]);
 #disp(X);
 
 #calcul de la matrice variance/covariance:
-moy = mean(X,1);
+moy = mean(X);
 
-V=cov(X);
-disp(V);
+Etype = std(X);
+disp(Etype)
 
-Etype = std(X,0,1);
-
-figure(1)
-scatter(X(:,1),X(:,2))
 figure(2)
+scatter(X(:,1),X(:,2))
+figure(3)
 scatter(X(:,3),X(:,4))
 
 for i=1:columns(X)
@@ -71,26 +70,36 @@ endfor
 
 #verification de la standardisation :
 #calcul de la matrice variance/covariance:
-V = cov(X);
-#disp("std dev");
-#disp(std(X));
-#disp("avg");
-#disp(mean(X));
-#disp("X standardized");
-#disp(X);
+disp("V")
+#V=(1/rows(X)).*(X'*X);
+V=cov(X);
+disp(V);
+disp("std dev");
+disp(std(X));
+disp("avg");
+disp(mean(X));
+disp("X standardized");
+disp(X);
 
-figure(3)
-scatter(X(:,1),X(:,2))
 figure(4)
+scatter(X(:,1),X(:,2))
+figure(5)
 scatter(X(:,3),X(:,4))
 
 [E,D] = eig(V);
+#V = E * ((D/rows(X)).^(1/2));
+disp(columns(X))
 
 infoTot = sum(diag(D));
-#disp(diag(D));
 percentInfo = (diag(D)/infoTot)*100;
-#disp(sum(percentInfo));
 
-figure(5);
+disp(D);
+figure(6);
 bar(percentInfo);
-#disp(cols);
+
+
+figure(7)
+scatter(X(:,1),X(:,2))
+figure(8)
+scatter(X(:,2),X(:,1))
+
