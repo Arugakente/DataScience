@@ -1,3 +1,5 @@
+#pkg install "./geometry-1.2.2.tar.gz";
+pkg load geometry;
 #Program Parameters
 
 
@@ -41,6 +43,7 @@ bar(1:size(chi), chi);
 
 
 X = (N-U) ./ sqrt(U); %X matrix for ACP computing
+X = N
 %disp(X);
 
 %ACP
@@ -50,7 +53,7 @@ disp("ACP DEBUG HERE")
 #for easier debug :
 #X = X(:,[10,11,12,13]);
 #X = X(:,[6,24]);
-#X = X(:,[6,2,7,10,1,5]);
+X = X(:,[6,2,7,10,1,5]);
 #disp(X);
 
 #calcul de la matrice variance/covariance:
@@ -109,4 +112,13 @@ figure(6);
 bar(diag(D));
 figure(7);
 bar(percentInfo);
-
+
+#drawing of the correlation circle
+figure(8)
+
+x=0;
+y=0; #center point ordered pair
+r1=1; #radius of circule
+drawCircle(x,y,r1);
+hold on
+quiver(zeros(1,rows(E)),zeros(1,rows(E)),E(:,1),E(:,2));
