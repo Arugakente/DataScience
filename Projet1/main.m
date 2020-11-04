@@ -6,9 +6,15 @@ epsilon = 0.001;
 
 
 
-
 workspace = pwd();
 files = glob(strcat(workspace,"/Dataset/smallExample4WS/processed/*.txt")); 
+
+#Test Files (choose one)
+#files = glob(strcat(workspace,"/Dataset/test/circle/*.txt"));
+#files = glob(strcat(workspace,"/Dataset/test/clique/*.txt"));
+#files = glob(strcat(workspace,"/Dataset/test/sink/*.txt"));
+#files = glob(strcat(workspace,"/Dataset/test/stable/*.txt"));
+#files = glob(strcat(workspace,"/Dataset/test/subset/*.txt"));
 
 n = ones(numel(files),1);
 M = zeros(numel(files),numel(files));
@@ -68,7 +74,7 @@ for i=1:numel(files)
           M(linkFrom,linkTo)=1;
         endif
       endif
-      
+#{     
     else %Words processing
       currentWord = tolower(currentWord);
       currentWord = strtrim(currentWord);
@@ -89,9 +95,11 @@ for i=1:numel(files)
         endif
         
      endif
+     #}
     endif
   endfor
 endfor
+
 
 disp(M);
 
@@ -153,6 +161,7 @@ disp(n);
 #    Main criterion: number of keyword match(toggleable)
 #    For site with same keyword match: verification with the pagerank to sort
 
+#{
 readed = "";
 
 do
@@ -258,3 +267,4 @@ do
     endfor
   endif
 until strcmp(readed,"/quit")
+#}
