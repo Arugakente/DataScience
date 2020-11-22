@@ -43,7 +43,7 @@ bar(1:size(chi), chi);
 
 
 X = (N-U) ./ sqrt(U); %X matrix for ACP computing
-X = N
+#X = N
 %disp(X);
 
 %ACP
@@ -52,8 +52,8 @@ disp("ACP DEBUG HERE")
 
 #for easier debug :
 #X = X(:,[10,11,12,13]);
-#X = X(:,[6,24]);
-X = X(:,[6,2,7,10,1,5]);
+X = X(:,[6,24,10,11]);
+#X = X(:,[6,2,7,10,1,5]);
 #disp(X);
 
 #calcul de la matrice variance/covariance:
@@ -98,7 +98,7 @@ figure(5)
 scatter(Xnorm(:,3),Xnorm(:,4))
 
 [E,D] = eig(Xnorm'*Xnorm);
-#V = E * ((D/rows(X)).^(1/2));
+V = E * ((D/rows(X)).^(1/2));
 disp(columns(Xnorm))
 
 infoTot = sum(diag(D));
@@ -113,12 +113,87 @@ bar(diag(D));
 figure(7);
 bar(percentInfo);
 
+finalValues = Xnorm*E;
+
+#selecting 2 bests dimentions
+first = 1;
+second = 1;
+
+maxFirst = 1;
+maxSecond = 1;
+
+max = 0;
+
+while(first<=rows(D))
+  if D(first,first)
+    max = D(first,first);
+    maxFirst = first;
+  endif
+  first += 1;
+endwhile
+
+max = 0;
+while(second<=rows(D))
+  if D(second,second) > max && second != maxFirst
+    max = D(second,second);
+    maxSecond = second;
+  endif
+  second += 1;
+endwhile
+
+disp(maxFirst)
+disp(maxSecond)
+
 #drawing of the correlation circle
 figure(8)
 
 x=0;
-y=0; #center point ordered pair
-r1=1; #radius of circule
+y=0;
+r1=1;
 drawCircle(x,y,r1);
 hold on
-quiver(zeros(1,rows(E)),zeros(1,rows(E)),E(:,1),E(:,2));
+quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,maxFirst),V(:,maxSecond));
+
+for i=1:columns(finalValues)
+  text(V(i,maxFirst),V(i,maxSecond),cols(1,i));
+endfor
+
+
+#getting limits of each axis
+minX = inf;
+maxX = -inf;
+
+minY = inf;
+maxY = -inf;
+
+for i=1:rows(finalValues)
+  if finalValues(i,maxFirst) > maxX
+    maxX = finalValues(i,maxFirst);
+  endif    
+  if finalValues(i,maxFirst) < minX
+    minX = finalValues(i,maxFirst);
+  endif
+  
+   if finalValues(i,maxSecond) > maxY
+    maxY = finalValues(i,maxSecond);
+  endif    
+  if finalValues(i,maxSecond) < minY
+    minY = finalValues(i,maxSecond);
+  endif
+endfor
+
+disp(maxX)
+disp(minX)
+disp(maxY)
+disp(minY)
+
+#drawing with main axis
+
+figure(9)
+axis([minX;maxX;minY;maxY],"equal")
+for i=1:rows(finalValues)
+  text(finalValues(i,maxFirst),finalValues(i,maxSecond),lines(i));
+endfor
+
+xlabel(strcat("factor1 :",num2str(percentInfo(maxFirst))," %"));
+ylabel(strcat("factor2 :",num2str(percentInfo(maxSecond))," %"));
