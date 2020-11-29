@@ -38,22 +38,22 @@ for j=1:size(N)(2)
 endfor
 chi *= 1/(size(N)(1)-1)
 
-figure(1);
-bar(1:size(chi), chi);
+#figure(1);
+#bar(1:size(chi), chi);
 
 
-X = (N-U) ./ sqrt(U); %X matrix for ACP computing
-#X = N
+#X = (N-U) ./ sqrt(U); %X matrix for ACP computing
+X = N
 %disp(X);
 
 %ACP
 
 disp("ACP DEBUG HERE")
 
-#for easier debug :
-#X = X(:,[10,11,12,13]);
-X = X(:,[6,24,10,11]);
-#X = X(:,[6,2,7,10,1,5]);
+#for easier debug : 
+#X = X(:,[10,11,12,13]); 
+X = X(:,[6,24,10,11]); 
+#X = X(:,[6,2,7,10,1,5]); 
 #disp(X);
 
 #calcul de la matrice variance/covariance:
@@ -62,10 +62,10 @@ moy = mean(X);
 Etype = std(X);
 disp(Etype)
 
-figure(2)
-scatter(X(:,1),X(:,2))
-figure(3)
-scatter(X(:,3),X(:,4))
+#figure(2)
+#scatter(X(:,1),X(:,2))
+#figure(3)
+#scatter(X(:,3),X(:,4))
 
 Xred = zeros(rows(X),columns(X));
 Xnorm = zeros(rows(X),columns(X));
@@ -82,9 +82,9 @@ disp("Matrice de covariance")
 covariance = cov(Xred);
 disp(covariance);
 disp("Matrice de corrélation")
-#V=(1/rows(X)).*(X'*X);
-V=cov(Xnorm);
-disp(V);
+#V1=(1/rows(Xnorm)).*(Xnorm'*Xnorm); #méthode de calcul classique
+correl=cov(Xnorm);
+disp(correl);
 disp("std dev");
 disp(std(Xnorm));
 disp("avg");
@@ -92,10 +92,10 @@ disp(mean(Xnorm));
 disp("X standardized");
 disp(Xnorm);
 
-figure(4)
-scatter(Xnorm(:,1),Xnorm(:,2))
-figure(5)
-scatter(Xnorm(:,3),Xnorm(:,4))
+#figure(4)
+#scatter(Xnorm(:,1),Xnorm(:,2))
+#figure(5)
+#scatter(Xnorm(:,3),Xnorm(:,4))
 
 [E,D] = eig(Xnorm'*Xnorm);
 V = E * ((D/rows(X)).^(1/2));
@@ -108,8 +108,8 @@ disp("eigenValues");
 disp(D);
 disp("eigenVectors");
 disp(E);
-figure(6);
-bar(diag(D));
+#figure(6);
+#bar(diag(D));
 figure(7);
 bar(percentInfo);
 
@@ -152,10 +152,10 @@ y=0;
 r1=1;
 drawCircle(x,y,r1);
 hold on
-quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,maxFirst),V(:,maxSecond));
+quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,maxFirst),V(:,maxSecond),'AutoScale','off');
 
 for i=1:columns(finalValues)
-  text(V(i,maxFirst),V(i,maxSecond),cols(1,i));
+  text(V(i,maxFirst)+0.01,V(i,maxSecond)+0.01,cols(1,i), "interpreter", "none");
 endfor
 
 
@@ -192,7 +192,7 @@ disp(minY)
 figure(9)
 axis([minX;maxX;minY;maxY],"equal")
 for i=1:rows(finalValues)
-  text(finalValues(i,maxFirst),finalValues(i,maxSecond),lines(i));
+  text(finalValues(i,maxFirst),finalValues(i,maxSecond),lines(i), "interpreter", "none");
 endfor
 
 xlabel(strcat("factor1 :",num2str(percentInfo(maxFirst))," %"));
