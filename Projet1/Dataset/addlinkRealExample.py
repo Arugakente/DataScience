@@ -5,18 +5,25 @@ inputDirectory = "./original"
 outputDirectory = "./processed"
 
 #probability parameters
-TopLevel = 0.6
-SecondLevel = 0.5
-ThirdLevel = 0.4
-FourAndAbove = 0.2
+TopLevel = 1.6
+SecondLevel = 1.1
+ThirdLevel = 0.8
+FourAndAbove = 0.5
 
 
-pickInside = 0.5
-pickOutside = 0.25
+pickInside = 1.0
+pickOutside = 0.5
 
 topics = []
 siteLevel = []
 fileStructure = []
+
+matrix = [[0,0,0,0],
+          [0,0,0,0],
+          [0,0,0,0],
+          [0,0,0,0],
+          [0,0,0,0],
+          [0,0,0,0]]
 
 count = 0
 
@@ -67,13 +74,24 @@ def manageFile(inputPath,outputPath,topicIndex,currentLevel,filename):
 
                 i = 0
                 found = False
-                while i<len(siteLevel[selectedTopic]):
+                while i<len(siteLevel[selectedTopic]) and not found:
                     if siteLevel[selectedTopic][i] == str(selectedLevel)+"grade":
                         found = True
                         selectedLevel = i
                     i+=1
 
-                if(selectedLevel>=currentLevel):
+                i=0
+                found = False
+                referenceLevel = 0
+                while i<len(siteLevel[selectedTopic]) and not found:
+                    if siteLevel[selectedTopic][i] == siteLevel[selectedTopic][currentLevel]+"grade":
+                        found = True
+                        referenceLevel = i
+                    i+=1
+
+
+                if(selectedLevel>=referenceLevel):
+                    matrix[selectedTopic][selectedLevel] += 1
                     fileLink = filename
                     while(fileLink == filename):
                         fileLink = fileStructure[selectedTopic][selectedLevel][random.randint(0,len(fileStructure[selectedTopic][selectedLevel])-1)]
@@ -100,13 +118,10 @@ for foldername in os.listdir(inputDirectory) :
         fileStructure.append([])
 
         levelIndex=0
-
         for categoryName in os.listdir(inputDirectory+"/"+foldername):
-
             if(categoryName[0] != "."):
                 siteLevel[topicIndex].append(categoryName)
                 fileStructure[topicIndex].append([])
-
                 for filename in os.listdir(inputDirectory+"/"+foldername+"/"+categoryName):
                     if(filename[0] != "."):
                         fileStructure[topicIndex][levelIndex].append(filename)
@@ -121,3 +136,7 @@ for i in range(0,len(topics)):
             count += manageFile(inputDirectory+"/"+topics[i]+"/"+siteLevel[i][j]+"/"+fileStructure[i][j][k],outputDirectory+"/"+fileStructure[i][j][k],i,j,fileStructure[i][j][k])
 
 print(str(count)+" liens créés")
+
+print(siteLevel)
+
+print(matrix)
