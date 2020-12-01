@@ -23,30 +23,9 @@ endfor
 
 
 %Matrix processing
-%AFC (chi)
-
-%hand, foot and total
-ni = sum(N,2);
-nj = sum(N,1);
-n = sum(sum(N,2),1);
-
-U = (ni .* nj) / n;
-
-chi = zeros(size(N)(2), 1);
-for j=1:size(N)(2)
-  chi(j) = sum(  (((N(:,j))-U(:,j))./sqrt(U(:,j))) .* (((N(:,j))-U(:,j))./sqrt(U(:,j)))  );
-endfor
-chi *= 1/(size(N)(1)-1)
-
-#figure(1);
-#bar(1:size(chi), chi);
-
-
-#X = (N-U) ./ sqrt(U); %X matrix for ACP computing
-X = N
-%disp(X);
-
 %ACP
+
+X = N
 
 disp("ACP DEBUG HERE")
 
@@ -67,6 +46,8 @@ disp(Etype)
 #figure(3)
 #scatter(X(:,3),X(:,4))
 
+
+#Normalization (reducing and centering)
 Xred = zeros(rows(X),columns(X));
 Xnorm = zeros(rows(X),columns(X));
 
@@ -81,7 +62,7 @@ endfor
 disp("Matrice de covariance")
 covariance = cov(Xred);
 disp(covariance);
-disp("Matrice de corrélation")
+disp("Matrice de correlation")
 #V1=(1/rows(Xnorm)).*(Xnorm'*Xnorm); #méthode de calcul classique
 correl=cov(Xnorm);
 disp(correl);
@@ -97,7 +78,9 @@ disp(Xnorm);
 #figure(5)
 #scatter(Xnorm(:,3),Xnorm(:,4))
 
+#Diagonalization
 [E,D] = eig(Xnorm'*Xnorm);
+
 V = E * ((D/rows(X)).^(1/2));
 disp(columns(Xnorm))
 
@@ -114,6 +97,8 @@ figure(7);
 bar(percentInfo);
 
 finalValues = Xnorm*E;
+
+
 
 #selecting 2 bests dimentions
 first = 1;
@@ -144,6 +129,7 @@ endwhile
 disp(maxFirst)
 disp(maxSecond)
 
+
 #drawing of the correlation circle
 figure(8)
 
@@ -159,7 +145,7 @@ for i=1:columns(finalValues)
 endfor
 
 
-#getting limits of each axis
+#getting limits of each axis (to avoid figure resizing)
 minX = inf;
 maxX = -inf;
 
@@ -186,6 +172,7 @@ disp(maxX)
 disp(minX)
 disp(maxY)
 disp(minY)
+
 
 #drawing with main axis
 
