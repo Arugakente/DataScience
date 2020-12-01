@@ -6,8 +6,8 @@ pkg load geometry;
 
 %Data Loading
 workspace = pwd();
-csv = csvread(strcat(workspace,"/Dataset/dataset.csv")); 
-txt = textread(strcat(workspace,"/Dataset/dataset.csv"),"%s"); %for titles
+csv = csvread(strcat(workspace,"/Dataset/datasetCleaned.csv")); 
+txt = textread(strcat(workspace,"/Dataset/datasetCleaned.csv"),"%s"); %for titles
 
 N = csv(2:size(csv)(1), 2:size(csv)(2)); %without columns and rows titles
 
@@ -31,7 +31,7 @@ disp("ACP DEBUG HERE")
 
 #for easier debug : 
 #X = X(:,[10,11,12,13]); 
-X = X(:,[6,24,10,11]); 
+#X = X(:,[6,24,10,11]); 
 #X = X(:,[6,2,7,10,1,5]); 
 #disp(X);
 
