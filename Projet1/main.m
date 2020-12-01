@@ -52,8 +52,6 @@ do
   endif
 until (strcmp(readed,"Y") || strcmp(readed,"N"))
 
-
-
 for i=1:numel(files)
   #Storing filename for graph labeling and result displaying
   labels{i} = substr(files{i},rindex(files(i),slash)+1);
@@ -69,9 +67,9 @@ for i=1:numel(files)
       
       if linkTo != linkFrom
         if multiCount
-          M(linkFrom,linkTo)+=1;
+          M(linkTo,linkFrom)+=1;
         else  
-          M(linkFrom,linkTo)=1;
+          M(linkTo,linkFrom)=1;
         endif
       endif
      
@@ -175,7 +173,7 @@ do
     for i=1:numel(readed)
       currentWord = tolower(readed{i});
       if isKey(invertedIndex,currentWord)
-        if(keywordCount)    %Adding pages that contains one of our words
+        if(keywordCount)    %Increasing the count of keyword that matched 
           keywordMatch += invertedIndex(currentWord); 
         else                %Storing pages that contains every words
           keywordMatch = or(keywordMatch,invertedIndex(currentWord));

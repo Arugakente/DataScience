@@ -1,3 +1,5 @@
+#pkg install "./geometry-1.2.2.tar.gz";
+pkg load geometry;
 #Program Parameters
 
 
@@ -36,21 +38,22 @@ for j=1:size(N)(2)
 endfor
 chi *= 1/(size(N)(1)-1)
 
-figure(1);
-bar(1:size(chi), chi);
+#figure(1);
+#bar(1:size(chi), chi);
 
 
-X = (N-U) ./ sqrt(U); %X matrix for ACP computing
+#X = (N-U) ./ sqrt(U); %X matrix for ACP computing
+X = N
 %disp(X);
 
 %ACP
 
 disp("ACP DEBUG HERE")
 
-#for easier debug :
-#X = X(:,[1:30]);
-X = X(:,[2,3,8,1]);
-#X = X(:,[2,6,7,8,5,1]);
+#for easier debug : 
+#X = X(:,[10,11,12,13]); 
+X = X(:,[6,24,10,11]); 
+#X = X(:,[6,2,7,10,1,5]); 
 #disp(X);
 
 #calcul de la matrice variance/covariance:
@@ -59,47 +62,138 @@ moy = mean(X);
 Etype = std(X);
 disp(Etype)
 
-figure(2)
-scatter(X(:,1),X(:,2))
-figure(3)
-scatter(X(:,3),X(:,4))
+#figure(2)
+#scatter(X(:,1),X(:,2))
+#figure(3)
+#scatter(X(:,3),X(:,4))
+
+Xred = zeros(rows(X),columns(X));
+Xnorm = zeros(rows(X),columns(X));
+
 
 for i=1:columns(X)
-   X(:,i)=(X(:,i)-moy(i))/Etype(i);
+   Xred(:,i)=(X(:,i)-moy(i));
+   Xnorm(:,i)=Xred(:,i)/Etype(i);
 endfor
 
 #verification de la standardisation :
 #calcul de la matrice variance/covariance:
-disp("V")
-#V=(1/rows(X)).*(X'*X);
-V=cov(X);
-disp(V);
+disp("Matrice de covariance")
+covariance = cov(Xred);
+disp(covariance);
+disp("Matrice de corrélation")
+#V1=(1/rows(Xnorm)).*(Xnorm'*Xnorm); #méthode de calcul classique
+correl=cov(Xnorm);
+disp(correl);
 disp("std dev");
-disp(std(X));
+disp(std(Xnorm));
 disp("avg");
-disp(mean(X));
+disp(mean(Xnorm));
 disp("X standardized");
-disp(X);
+disp(Xnorm);
 
-figure(4)
-scatter(X(:,1),X(:,2))
-figure(5)
-scatter(X(:,3),X(:,4))
+#figure(4)
+#scatter(Xnorm(:,1),Xnorm(:,2))
+#figure(5)
+#scatter(Xnorm(:,3),Xnorm(:,4))
 
-[E,D] = eig(V);
-#V = E * ((D/rows(X)).^(1/2));
-disp(columns(X))
+[E,D] = eig(Xnorm'*Xnorm);
+V = E * ((D/rows(X)).^(1/2));
+disp(columns(Xnorm))
 
 infoTot = sum(diag(D));
 percentInfo = (diag(D)/infoTot)*100;
 
+disp("eigenValues");
 disp(D);
-figure(6);
+disp("eigenVectors");
+disp(E);
+#figure(6);
+#bar(diag(D));
+figure(7);
 bar(percentInfo);
 
+finalValues = Xnorm*E;
 
-figure(7)
-scatter(X(:,1),X(:,2))
+#selecting 2 bests dimentions
+first = 1;
+second = 1;
+
+maxFirst = 1;
+maxSecond = 1;
+
+max = 0;
+
+while(first<=rows(D))
+  if D(first,first)
+    max = D(first,first);
+    maxFirst = first;
+  endif
+  first += 1;
+endwhile
+
+max = 0;
+while(second<=rows(D))
+  if D(second,second) > max && second != maxFirst
+    max = D(second,second);
+    maxSecond = second;
+  endif
+  second += 1;
+endwhile
+
+disp(maxFirst)
+disp(maxSecond)
+
+#drawing of the correlation circle
 figure(8)
-scatter(X(:,2),X(:,1))
+
+x=0;
+y=0;
+r1=1;
+drawCircle(x,y,r1);
+hold on
+quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,maxFirst),V(:,maxSecond),'AutoScale','off');
+
+for i=1:columns(finalValues)
+  text(V(i,maxFirst)+0.01,V(i,maxSecond)+0.01,cols(1,i), "interpreter", "none");
+endfor
+
+
+#getting limits of each axis
+minX = inf;
+maxX = -inf;
+
+minY = inf;
+maxY = -inf;
+
+for i=1:rows(finalValues)
+  if finalValues(i,maxFirst) > maxX
+    maxX = finalValues(i,maxFirst);
+  endif    
+  if finalValues(i,maxFirst) < minX
+    minX = finalValues(i,maxFirst);
+  endif
+  
+   if finalValues(i,maxSecond) > maxY
+    maxY = finalValues(i,maxSecond);
+  endif    
+  if finalValues(i,maxSecond) < minY
+    minY = finalValues(i,maxSecond);
+  endif
+endfor
+
+disp(maxX)
+disp(minX)
+disp(maxY)
+disp(minY)
+
+#drawing with main axis
+
+figure(9)
+axis([minX;maxX;minY;maxY],"equal")
+for i=1:rows(finalValues)
+  text(finalValues(i,maxFirst),finalValues(i,maxSecond),lines(i), "interpreter", "none");
+endfor
 
+xlabel(strcat("factor1 :",num2str(percentInfo(maxFirst))," %"));
+ylabel(strcat("factor2 :",num2str(percentInfo(maxSecond))," %"));

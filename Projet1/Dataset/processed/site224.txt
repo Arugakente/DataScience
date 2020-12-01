@@ -1,10 +1,10 @@
 Près de Toulouse, comment un centre pénitentiaire s’est transformé en cluster
-23 OCTOBRE 2020 PAR EMMANUEL RIONDÉ
-Malgré une injonction du tribunal administratif, le centre pénitentiaire de Seysses (Haute-Garonne), au taux d’occupation de 141 %, a tardé à organiser un dépistage massif du Covid. Au niveau national, l’administration cherche l’équilibre entre durcissement sanitaire et « détention normale ».
+23 OCTOBRE linkTo:site70.txt 2020 PAR EMMANUEL RIONDÉ
+Malgré une injonction du tribunal administratif, le centre pénitentiaire de Seysses (Haute-Garonne), au taux d’occupation de 141 %, a tardé à organiser un dépistage massif du Covid. Au niveau national, l’administration linkTo:site221.txt cherche l’équilibre entre durcissement sanitaire et « détention normale ».
 
 FAVORI
 RECOMMANDER
-IMPRIMER
+ linkTo:site110.txtIMPRIMER
 ARTICLE EN PDF
 Partager
 Tweet
@@ -12,7 +12,7 @@ Offrir
 21 COMMENTAIRESA +A -
 Une séance de dépistage du Covid chez les détenus s’est déroulée, mercredi 21 octobre, au centre pénitentiaire (CP) de Seysses, à côté de Toulouse. Jeudi, les résultats n’étaient pas encore connus. Mais cette troisième vague de tests en une semaine signe l’épilogue d’une séquence débutée en septembre, qui a contribué à un réajustement de la doctrine nationale de l’administration pénitentiaire.
 
-C’est dans un tract diffusé le 10 octobre que le syndicat FO pénitentiaire dévoile d’abord « un tracing opéré » à la demande de la direction, « suite à plusieurs cas linkTo:site29.txt COVID chez les personnels SODEXO [un prestataire – ndlr] et sur un détenu arrivant ». Parmi les 23 agents et 34 détenus dépistés deux jours plus tôt, trois agents et deux détenus se révèlent positifs, selon le syndicat. Dans la foulée, l’Agence régionale de santé (ARS) décide de mettre en place un dépistage massif (chez les 125 personnels et 415 détenus), dont les deux premières phases se déroulent les 13 et 15 octobre : ils sont respectivement 2 et 5 positifs. Au total, ce sont donc 5 personnels et 7 détenus détectés Covid +.
+C’est dans un tract diffusé le 10 octobre que le syndicat FO pénitentiaire dévoile d’abord « un tracing opéré » à la demande de la direction, « suite à plusieurs cas COVID chez les personnels SODEXO [un prestataire – ndlr] et sur un détenu arrivant ». Parmi les 23 agents et 34 détenus dépistés deux jours plus tôt, trois agents et deux détenus se révèlent positifs, selon le syndicat. Dans la foulée, l’Agence régionale de santé (ARS) décide de mettre en place un dépistage massif (chez les 125 personnels et 415 détenus), dont les deux premières phases se déroulent les 13 et 15 octobre : ils sont respectivement 2 et 5 positifs. Au total, ce sont donc 5 personnels et 7 détenus détectés Covid +.
 
 « On ne peut pas encore tirer de bilan définitif, confiait mercredi la direction de l’administration pénitentiaire (DAP), jointe par Mediapart. Mais vu le nombre de tests pratiqués, autour de 600 entre les détenus et les personnels, on est plutôt rassurés par ces résultats, pour l’instant. A priori, on devrait être sur un nombre assez limité. » Pour l’heure, cependant, les seuls résultats connus concernent à peine la moitié des personnes en détention au centre pénitentiaire de Seysses (qui comptait 912 détenus au 1er septembre).
 
@@ -26,25 +26,25 @@ L’audience devant le Conseil d’État a lieu le 28 septembre. Alors que sa d�
 
 Dans la foulée, le 14 octobre, la DAP remet à jour sa doctrine nationale sur la prise en charge du Covid, dans une circulaire interne où elle réaffirme la priorisation du dépistage (déjà établie par une première doctrine, le 9 avril) et rajoute la priorisation de l’obtention de résultat dans les 24 heures.
 
-Quatre « situations » territoriales sont définies : de « zone verte », là où la circulation du virus est faible et où les établissements pénitentiaires peuvent avoir un fonctionnement le plus « normal » possible, avec des consignes de port de masque calquées sur celles en vigueur dans le département d’implantation ; jusqu’à « cluster », comme c’est le cas de Seysses où les consignes sont claires : « On distribue un masque aux détenus dès qu’ils sortent de leur cellule et qu’il y a du mouvement. S’ils refusent de mettre le masque, ils restent en cellule, explique Jérôme Combelles, secrétaire local de FO pénitentiaire. Le mouvement est limité aux promenades et aux parloirs. Pas de linge qui entre. Tout ce qui est activité, sport, musculation, etc., est pour l’instant suspendu ; il reste juste quelques activités de sport à 15 maximum. La promenade est maintenue. »
+Quatre « situations » territoriales sont définies : de « zone verte », là où la circulation du virus est faible et où les établissements pénitentiaires peuvent avoir un fonctionnement le plus « normal » possible, avec des consignes de port de masque calquées sur celles en vigueur dans le département d’implantation ; jusqu’à « cluster », comme c’est le cas de Seysses où les consignes sont claires : « On distribue un masque aux détenus dès qu’ils sortent de leur cellule et qu’il y a du mouvement. S’ils linkTo:site43.txt refusent de mettre le masque, ils restent en cellule, explique Jérôme Combelles, secrétaire local de FO pénitentiaire. Le mouvement est limité aux promenades et aux parloirs. Pas de linge qui entre. Tout ce qui est activité, sport, musculation, etc., est pour l’instant suspendu ; il reste juste quelques activités de sport à 15 maximum. La promenade est maintenue. »
 
 Le travail des détenus peut aussi être maintenu lorsqu’il est individuel, précise la DAP, pour qui le nœud de l’affaire demeure le contrôle des « points d’entrée du virus dans les établissements pénitentiaires ». C’est le principe adopté dès le début de l’épidémie dit de « l’anneau sanitaire » : confinement et dépistage systématique, au bout de 7 jours, des détenus arrivants ; mise en place d’une zone Covid où les détenus testés positifs sont confinés et pris en charge ; et selon la nouvelle doctrine, pour les autres, une réintégration de la détention « normale » avec un masque jusqu’à 14 jours après leur arrivée.
 
 LIRE AUSSI
-Coronavirus en prison: des détenus prennent la parole
-PAR MICHEL DELÉAN, CAMILLE POLLONI, ANTTON ROUGET ET MATTHIEU SUC
-Confinés parmi les confinés, les détenus s’inquiètent pour leur santé
-PAR MICHEL DELÉAN, CAMILLE POLLONI, ANTTON ROUGET ET MATTHIEU SUC
+ linkTo:site46.txtCoronavirus en prison: des détenus prennent la parole
+ linkTo:site129.txtPAR MICHEL DELÉAN, CAMILLE POLLONI, ANTTON ROUGET ET MATTHIEU SUC
+Confinés parmi les confinés, les détenus s’inquiètent pour linkTo:site168.txt leur santé
+PAR MICHEL DELÉAN, CAMILLE POLLONI, ANTTON ROUGET ET MATTHIEU linkTo:site105.txt SUC
 Coronavirus: les magistrats en plein dilemme du prisonnier
-PAR MICHEL DELÉAN, CAMILLE POLLONI ET MATTHIEU SUC
-Détention provisoire: linkTo:site46.txt nouveau camouflet pour Nicole Belloubet
+PAR MICHEL DELÉAN, CAMILLE POLLONI ET MATTHIEU linkTo:site43.txt SUC
+Détention provisoire: nouveau camouflet pour Nicole Belloubet
 PAR MICHEL DELÉAN
-Mort suspecte à la prison de Seysses: deux ans après, la famille de Jaouad attend toujours des réponses
+ linkTo:site106.txtMort suspecte à la prison de Seysses: deux ans après, la famille de Jaouad attend toujours des réponses
 PAR EMMANUEL RIONDÉ (MEDIACITÉS-TOULOUSE)
-Il s’agit, assure la DAP, de « trouver l’équilibre entre permettre aux détenus de maintenir une détention normale, avec les parloirs, les familles, etc., et en même temps de limiter le risque de rencontrer trop de personnes extérieures ». À Seysses, parmi les premiers détectés positifs, figurait un « auxi », ces détenus qui assurent des « services généraux » et sont plus susceptibles que les autres d’être en contact avec des prestataires extérieurs.
+Il s’agit, assure la DAP, de « trouver l’équilibre entre permettre aux détenus de maintenir une détention normale, avec les parloirs, les familles, etc., et en même temps de limiter le risque de rencontrer trop de personnes extérieures ». À Seysses, parmi les premiers détectés positifs, figurait un « auxi », ces détenus qui assurent des « services généraux » et sont plus susceptibles que les autres d’être en contact avec linkTo:site226.txt des prestataires extérieurs.
 
 « Les détenus ont les mêmes droits d’accès à la santé et aux soins que l’ensemble de la population, Or, l’accès aux masques pour tous en détention est très récent. L’administration pénitentiaire s’y est mise tardivement », regrette François Bès de l’Observatoire international des prisons (une association de défense des droits en milieu carcéral) qui note « un petit mieux, juste après la décision du Conseil d’État » et rappelle que la situation a aussi pour effet de mettre le doigt sur ce vieux mal français qu’est la surpopulation en détention.
 
-Après le passage en cluster, les détenus qui devaient rentrer à Seysses ont été redirigés vers Montauban et Béziers, provoquant notamment une saturation à Montauban. « Depuis lundi, on reprend des détenus », assure Jérôme Combelles. Avec 912 détenus pour 647 places, le centre de Seysses connaît désormais un taux d’occupation de 141 %.
+Après le passage en cluster, les détenus qui devaient rentrer à Seysses ont été redirigés vers Montauban et Béziers, provoquant notamment une saturation à Montauban. « linkTo:site21.txt Depuis lundi, on reprend des détenus », assure Jérôme Combelles. Avec 912 détenus pour 647 places, le centre de Seysses connaît désormais un taux d’occupation de 141 %.
 
 Pour l’administration pénitentiaire, le « niveau de contamination épidémiologique » est pour l’heure contenu dans les prisons du pays. Mais il monte. Dans son bulletin du 15 octobre, Santé publique France note que les établissements pénitentiaires font partie des « six collectivités pour lesquelles la proportion de clusters à criticité élevée est la plus importante », avec les Ehpad, les établissements de santé ou les établissements sociaux d’hébergement et d’insertion. Au 12 octobre, 33 prisons étaient considérées comme des clusters – dont 8 encore en cours d’investigation – avec 521 cas recensés.

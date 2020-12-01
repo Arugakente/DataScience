@@ -1,43 +1,43 @@
-ÉCONOMIE linkTo:site44.txt FRANÇAISE
+ÉCONOMIE FRANÇAISE
 Le pouvoir d’achat tire la croissance en France, qui devrait augmenter de 1,3 % en 2019
 Le pouvoir d’achat, soutenu par les mesures d’urgence et des prix à peu près stables, croîtrait de 2,3 % cette année, selon l’Insee.
 
-Par Elise Barthet Publié le 20 juin 2019 à 18h13 - Mis à jour le 21 juin 2019 à 09h05
+ linkTo:site46.txtPar Elise Barthet Publié le 20 juin 2019 à 18h13 linkTo:site44.txt - Mis à jour le 21 juin 2019 à 09h05
 
-Temps deLecture 3 min.
+Temps linkTo:site104.txt deLecture 3 min.
 
-Partage
-
-Partager sur linkTo:site44.txt Facebook
+ linkTo:site7.txtPartage
+ linkTo:site45.txt
+Partager sur Facebook
 
 Envoyer par e-mail
 
-Partager sur Messenger
+ linkTo:site50.txtPartager sur Messenger
 Plus d’options
 Le décor est planté depuis plusieurs trimestres déjà. En fond de scène : un ciel brouillé par la guerre commerciale et le Brexit. Bloquée dans les coulisses : la consommation des ménages. Emergeant côté cour : des créations d’emplois. Sur les planches, enfin : une croissance sans panache, avec, en vedette, le pouvoir d’achat. L’économie française se tient.
 
-D’après la dernière note de conjoncture de l’Institut national de la statistique et des études économiques (Insee), publiée jeudi 20 juin, l’activité devrait progresser de 0,3 % au deuxième trimestre de 2019, 0,3 % au linkTo:site42.txt troisième, et de… 0,3 % au quatrième. Une régularité de métronome qui porterait la croissance annuelle à 1,3 % cette année. L’Hexagone pourrait ainsi dépasser d’un petit dixième la moyenne de la zone euro.
+ linkTo:site42.txtD’après la dernière note de conjoncture de l’Institut national de la statistique et des études économiques (Insee), publiée jeudi 20 juin, l’activité devrait progresser de 0,3 % au deuxième trimestre de 2019, 0,3 % au troisième, et de… 0,3 % au quatrième. Une régularité de métronome qui porterait la croissance annuelle à 1,3 % cette année. L’Hexagone pourrait ainsi dépasser d’un petit dixième la moyenne de la zone euro.
 
-La performance n’a rien d’éblouissant, mais, dans un contexte de ralentissement mondial et d’inquiétudes linkTo:site46.txt en Allemagne et en Italie, elle est loin d’être indigente. Et les fondamentaux sont solides.
+La performance n’a rien d’éblouissant, mais, dans un contexte de ralentissement mondial et d’inquiétudes en Allemagne et en Italie, elle est loin d’être indigente. Et les fondamentaux sont solides.
 
-Article réservé à nos abonnés Lire aussi  Désabusés, les Français ne croient plus aux bonnes nouvelles économiques
+ linkTo:site42.txtArticle réservé à nos abonnés Lire aussi  Désabusés, les Français ne croient plus aux bonnes nouvelles économiques
 « Attentisme »
 « Si 2018 a surtout été portée comptablement par le commerce extérieur, 2019 le serait davantage par la demande intérieure », écrit l’Insee. En d’autres termes : s’il se fait toujours attendre, le redémarrage de la consommation devrait bien finir par se manifester. Le pouvoir d’achat, soutenu par les mesures d’urgences annoncées en décembre 2018 et des prix à peu près stables, croîtrait de 2,3 % cette année (1,8 % par unité de consommation). Une hausse qu’on n’avait plus observée depuis 2007.
 
-Certes, pour le moment, l’essentiel des gains a été mis de côté par les Français. Le taux d’épargne, qui a franchi, au premier trimestre, le seuil des 15 %, se maintiendrait à un niveau élevé jusqu’en décembre. « Reflétant, peut-être, dans l’ombre portée de la crise des “gilets jaunes”, un climat teinté d’un peu d’attentisme », selon l’Insee, cette prudence n’est pas inédite. Elle n’est pas non plus alarmante. Des mesures comme la prime exceptionnelle versée entre décembre et mars par les entreprises, ainsi que la revalorisation de la prime d’activité, pouvaient difficilement être anticipées. Les gains ont donc naturellement été stockés.
+ linkTo:site42.txtCertes, pour le moment, l’essentiel des gains a été mis de côté par les Français. Le taux d’épargne, qui a franchi, au premier trimestre, le seuil des 15 %, se maintiendrait à un niveau élevé jusqu’en décembre. « Reflétant, peut-être, dans l’ombre portée de la crise des “gilets jaunes”, un climat teinté d’un peu d’attentisme », selon l’Insee, cette prudence n’est pas inédite. Elle n’est pas non plus alarmante. Des mesures comme la prime exceptionnelle versée entre décembre et mars par les entreprises, ainsi que la revalorisation de la prime d’activité, pouvaient difficilement être anticipées. Les gains ont donc naturellement été stockés.
 
 Article réservé à nos abonnés Lire aussi  Pouvoir d’achat : des mesures pas toujours lisibles mais qui commencent à faire effet
 Ils ont néanmoins sans doute aussi contribué à l’amélioration du climat général. La confiance des ménages s’est en effet nettement redressée ces derniers mois dans les enquêtes d’opinion. S’il y a peu de chance qu’elles s’emballent, leurs dépenses en biens et services devraient légèrement accélérer en cours d’année, avec une augmentation de 0,5 % attendue au troisième trimestre, après 0,3 % entre avril et juin. La consommation progresserait de 1,3 % en moyenne annuelle, après seulement 0,9 % en 2018.
 
 Bonne nouvelle sur le front de l’emploi
-Article réservé à nos abonnés Lire aussi  En dépit d’une croissance molle, les créations d’emplois accélèrent nettement en France
+ linkTo:site49.txtArticle réservé à nos abonnés Lire aussi  En dépit d’une croissance molle, les créations d’emplois accélèrent nettement en France
 Evidemment, ces variations peuvent paraître infimes. Mais la consommation reste le principal moteur de croissance en France. Elle représente plus de la moitié du produit intérieur brut (PIB). Sa bonne tenue est déterminante pour la santé de l’économie tricolore, comme l’est, pour l’Allemagne, le commerce extérieur.
 
 Elle sera, cette année, soutenue par la dynamique du marché du travail. Les créations, qui ont vivement accéléré au premier trimestre, vont continuer sur leur lancée. D’après l’Insee, 241 000 nouveaux postes verraient le jour cette année, après 182 000 en 2018. De quoi entamer un peu plus le taux de chômage. Ce dernier s’établirait, en décembre, aux alentours de 8,3 %. Un chiffre encore élevé par rapport à la moyenne de la zone euro, mais qui se rapproche des niveaux d’avant-crise.
 
-Une ombre au tableau, les achats de logements
-Malgré de sérieuses difficultés de recrutement, le moral est en effet plutôt bon linkTo:site47.txt dans les entreprises. Les indices qui mesurent le climat des affaires sont largement supérieurs à leur moyenne de longue période, tous secteurs d’activité confondus. Ils sont particulièrement bien orientés dans la construction et se sont repris, au deuxième trimestre, dans l’industrie. L’investissement, qui avait tiré la croissance en 2017 et en 2018, a ralenti, mais demeure à un niveau élevé. En 2019, il augmenterait encore de 3,3 %.
+Une ombre au tableau, linkTo:site44.txt les achats de logements
+Malgré de sérieuses difficultés de recrutement, le moral est en effet plutôt bon dans les entreprises. Les indices qui mesurent le climat des affaires sont largement supérieurs à leur moyenne de longue période, tous secteurs d’activité confondus. Ils sont particulièrement bien orientés dans la construction et se sont repris, au deuxième trimestre, dans l’industrie. L’investissement, qui avait tiré la croissance en 2017 et en 2018, a ralenti, mais demeure à un niveau élevé. En 2019, il augmenterait encore de 3,3 %.
 
-La principale ombre au tableau (hors contexte international) concerne les achats de logements des ménages ; ils avaient beaucoup contribué à amorcer la reprise en 2016. Or on observe, depuis la fin de 2018, un recul marqué. Ces dépenses se replieraient de 0,3 % sur l’année.
+ linkTo:site110.txtLa principale ombre au tableau (hors contexte international) concerne les achats de logements des ménages ; ils avaient beaucoup contribué à amorcer la reprise en 2016. Or on observe, depuis la fin de 2018, un recul marqué. Ces dépenses se replieraient de 0,3 % sur l’année.
 
-Lire aussi  L’économie française résiste bien au ralentissement européen
+Lire aussi  L’économie française résiste bien au ralentissement européen linkTo:site50.txt
