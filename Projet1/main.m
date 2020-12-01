@@ -7,9 +7,9 @@ epsilon = 0.001;
 
 
 workspace = pwd();
-files = glob(strcat(workspace,"/Dataset/processed/*.txt")); 
+files = glob(strcat(workspace,"/Dataset/big240WS/processed/*.txt")); 
 
-#Test Files (choose one)
+#Test Files (choose one and comment the previous line)
 #files = glob(strcat(workspace,"/Dataset/test/circle/*.txt"));
 #files = glob(strcat(workspace,"/Dataset/test/clique/*.txt"));
 #files = glob(strcat(workspace,"/Dataset/test/sink/*.txt"));
@@ -76,6 +76,7 @@ for i=1:numel(files)
           M(linkTo,linkFrom)=1;
         endif
       endif   
+    
     else %Words processing
       currentWord = tolower(currentWord);
       currentWord = strtrim(currentWord);
@@ -95,6 +96,7 @@ for i=1:numel(files)
           invertedIndex(currentWord) = tmp;
         endif
      endif
+     
     endif
   endfor
 endfor
@@ -149,7 +151,8 @@ hold on;
 for i=2:size(M)(1)
   plot(0:maxTime-1, x(i,1:maxTime));
 endfor 
-%legend(labels');
+
+#legend(labels');
 disp(n);
 
 
