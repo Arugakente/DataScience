@@ -24,9 +24,6 @@ invertedIndex = containers.Map();
 stopwordsMap = containers.Map();
 stopwordsMap("") = 0;
 
-#List of site name
-labels = [];
-
 %Stopwords list loading
 stopwords = textread("stopwords.txt", "%s");
 
@@ -52,9 +49,14 @@ do
   endif
 until (strcmp(readed,"Y") || strcmp(readed,"N"))
 
+#List of site name
+labels = [];
+for i= 1:numel(files)
+  labels{i} = strcat("site",num2str(i),".txt  ")
+endfor
+
 for i=1:numel(files)
   #Storing filename for graph labeling and result displaying
-  labels{i} = substr(files{i},rindex(files(i),slash)+1);
   currentFile = textread(files{i}, "%s");
   linkFrom = str2num(substr(files{i},rindex(files{i},slash) + 5, rindex(files{i},".") - (rindex(files{i},slash) + 5)));
   
@@ -71,8 +73,7 @@ for i=1:numel(files)
         else  
           M(linkTo,linkFrom)=1;
         endif
-      endif
-     
+      endif   
     else %Words processing
       currentWord = tolower(currentWord);
       currentWord = strtrim(currentWord);
@@ -91,7 +92,6 @@ for i=1:numel(files)
           tmp(i) = 1;
           invertedIndex(currentWord) = tmp;
         endif
-        
      endif
     endif
   endfor
@@ -158,7 +158,6 @@ disp(n);
 #    Main criterion: number of keyword match(toggleable)
 #    For site with same keyword match: verification with the pagerank to sort
 
-#{
 readed = "";
 
 do
@@ -264,4 +263,3 @@ do
     endfor
   endif
 until strcmp(readed,"/quit")
-#}
