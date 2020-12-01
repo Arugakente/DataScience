@@ -7,9 +7,9 @@ epsilon = 0.001;
 
 
 workspace = pwd();
-files = glob(strcat(workspace,"/Dataset/average15WS/processed/*.txt")); 
+files = glob(strcat(workspace,"/Dataset/big240WS/processed/*.txt")); 
 
-#Test Files (choose one)
+#Test Files (choose one and comment the previous line)
 #files = glob(strcat(workspace,"/Dataset/test/circle/*.txt"));
 #files = glob(strcat(workspace,"/Dataset/test/clique/*.txt"));
 #files = glob(strcat(workspace,"/Dataset/test/sink/*.txt"));
@@ -56,6 +56,8 @@ for i= 1:numel(files)
 endfor
 
 for i=1:numel(files)
+  disp(strcat("file: ",num2str(i),slash,num2str(numel(files))));
+  
   #Storing filename for graph labeling and result displaying
   currentFile = textread(files{i}, "%s");
   linkFrom = str2num(substr(files{i},rindex(files{i},slash) + 5, rindex(files{i},".") - (rindex(files{i},slash) + 5)));
@@ -74,6 +76,7 @@ for i=1:numel(files)
           M(linkTo,linkFrom)=1;
         endif
       endif   
+    
     else %Words processing
       currentWord = tolower(currentWord);
       currentWord = strtrim(currentWord);
@@ -93,6 +96,7 @@ for i=1:numel(files)
           invertedIndex(currentWord) = tmp;
         endif
      endif
+     
     endif
   endfor
 endfor
@@ -147,7 +151,8 @@ hold on;
 for i=2:size(M)(1)
   plot(0:maxTime-1, x(i,1:maxTime));
 endfor 
-legend(labels');
+
+#legend(labels');
 disp(n);
 
 
@@ -157,6 +162,7 @@ disp(n);
 #Request section over the loaded datas (seach engine)
 #    Main criterion: number of keyword match(toggleable)
 #    For site with same keyword match: verification with the pagerank to sort
+
 
 readed = "";
 

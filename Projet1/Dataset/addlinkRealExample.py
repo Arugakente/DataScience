@@ -1,8 +1,8 @@
 import os
 import random
 
-inputDirectory = "./original"
-outputDirectory = "./processed"
+inputDirectory = "./big240WS/original"
+outputDirectory = "./big240WS/processed"
 
 #probability parameters
 TopLevel = 1.6
