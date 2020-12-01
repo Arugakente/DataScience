@@ -7,12 +7,12 @@ outputDirectory = "./processed"
 #probability parameters
 TopLevel = 1.6
 SecondLevel = 1.1
-ThirdLevel = 0.8
-FourAndAbove = 0.5
+ThirdLevel = 0.6
+FourAndAbove = 0.2
 
 
-pickInside = 1.0
-pickOutside = 0.5
+pickInside = 0.5
+pickOutside = 0.25
 
 topics = []
 siteLevel = []
@@ -77,28 +77,31 @@ def manageFile(inputPath,outputPath,topicIndex,currentLevel,filename):
                 while i<len(siteLevel[selectedTopic]) and not found:
                     if siteLevel[selectedTopic][i] == str(selectedLevel)+"grade":
                         found = True
-                        selectedLevel = i
+                        selectedLevelIndex = i
                     i+=1
 
                 i=0
                 found = False
-                referenceLevel = 0
-                while i<len(siteLevel[selectedTopic]) and not found:
-                    if siteLevel[selectedTopic][i] == siteLevel[selectedTopic][currentLevel]+"grade":
+                referenceLevel = 1
+                while i<=len(siteLevel[selectedTopic]) and not found:
+                    if siteLevel[selectedTopic][currentLevel] == str(i)+"grade":
                         found = True
                         referenceLevel = i
                     i+=1
 
-
-                if(selectedLevel>=referenceLevel):
-                    matrix[selectedTopic][selectedLevel] += 1
+                if(selectedLevel<=referenceLevel):
+                    matrix[selectedTopic][selectedLevelIndex] += 1
                     fileLink = filename
                     while(fileLink == filename):
-                        fileLink = fileStructure[selectedTopic][selectedLevel][random.randint(0,len(fileStructure[selectedTopic][selectedLevel])-1)]
+                        fileLink = fileStructure[selectedTopic][selectedLevelIndex][random.randint(0,len(fileStructure[selectedTopic][selectedLevelIndex])-1)]
 
                     fileLink = " linkTo:"+fileLink
                     count += 1
-                    print(count)
+                    print(selectedTopic)
+                    print(selectedLevel)
+                    print(referenceLevel)
+                    print(fileLink)
+                    print(filename)
                     if insertPosition == len(currentLine):
                         currentLine += fileLink
                     else:
