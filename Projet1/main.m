@@ -52,7 +52,7 @@ until (strcmp(readed,"Y") || strcmp(readed,"N"))
 #List of site name
 labels = [];
 for i= 1:numel(files)
-  labels{i} = strcat("site",num2str(i),".txt  ")
+  labels{i} = strcat("site",num2str(i),".txt  ");
 endfor
 
 for i=1:numel(files)
@@ -63,7 +63,7 @@ for i=1:numel(files)
   linkFrom = str2num(substr(files{i},rindex(files{i},slash) + 5, rindex(files{i},".") - (rindex(files{i},slash) + 5)));
   
   for j=1:numel(currentFile)
-    #disp(strcat("file: ",num2str(i),slash,num2str(numel(files))," | word: ",num2str(j),slash,num2str(numel(currentFile))))
+    disp(strcat("file: ",num2str(i),slash,num2str(numel(files))," | word: ",num2str(j),slash,num2str(numel(currentFile))))
     currentWord = currentFile{j};
     
     if isempty(regexp(currentWord,"linkTo:.*")) == 0 %Link processing
@@ -87,12 +87,12 @@ for i=1:numel(files)
         
         if isKey(invertedIndex,currentWord) %Already on list
           tmp = invertedIndex(currentWord);
-          tmp(i) = 1;
+          tmp(linkFrom) = 1;
           invertedIndex(currentWord) = tmp;
           
         else %Not in the list
           tmp = zeros(1,numel(files));
-          tmp(i) = 1;
+          tmp(linkFrom) = 1;
           invertedIndex(currentWord) = tmp;
         endif
      endif
@@ -179,13 +179,12 @@ do
       currentWord = tolower(readed{i});
       if isKey(invertedIndex,currentWord)
         if(keywordCount)    %Increasing the count of keyword that matched 
-          keywordMatch += invertedIndex(currentWord); 
+          keywordMatch += invertedIndex(currentWord);
         else                %Storing pages that contains every words
           keywordMatch = or(keywordMatch,invertedIndex(currentWord));
         endif
       endif
     endfor
-    
     if(keywordCount)
       for i=1:numel(files)
         stored = false;
