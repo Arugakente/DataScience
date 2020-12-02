@@ -81,11 +81,32 @@ disp(Xnorm);
 #Diagonalization
 [E,D] = eig(Xnorm'*Xnorm);
 
+#reverse order (asc to dsc)
+dim = columns(D);
+for i=1:round(dim/2)
+  
+  tmpD = D(dim-i+1,dim-i+1);
+  disp(tmpD);
+  D(dim-i+1,dim-i+1) = D(i,i);
+  D(i,i) = tmpD;
+  
+  tmpE = E(:,dim-i+1);
+  E(:,dim-i+1) = E(:,i);
+  E(:,i) = tmpE;
+endfor
+
 V = E * ((D/rows(X)).^(1/2));
 disp(columns(Xnorm))
 
 infoTot = sum(diag(D));
 percentInfo = (diag(D)/infoTot)*100;
+
+#cumulative information
+cumulInfo = zeros(size(percentInfo));
+cumulInfo(1) = percentInfo(1);
+for i=2:size(percentInfo)
+  cumulInfo(i) = cumulInfo(i-1) + percentInfo(i);
+endfor
 
 disp("eigenValues");
 disp(D);
@@ -96,16 +117,21 @@ disp(E);
 figure(7);
 bar(percentInfo);
 
+figure(8);
+bar(cumulInfo);
+
 finalValues = Xnorm*E;
 
 
-
+#{
 #selecting 2 bests dimentions
 first = 1;
 second = 1;
 
 maxFirst = 1;
 maxSecond = 1;
+maxThird = 1;
+max
 
 max = 0;
 
@@ -128,59 +154,94 @@ endwhile
 
 disp(maxFirst)
 disp(maxSecond)
-
+#}
 
 #drawing of the correlation circle
-figure(8)
+figure(9)
 
 x=0;
 y=0;
 r1=1;
 drawCircle(x,y,r1);
 hold on
-quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,maxFirst),V(:,maxSecond),'AutoScale','off');
+quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,1),V(:,2),'AutoScale','off');
 
 for i=1:columns(finalValues)
-  text(V(i,maxFirst)+0.01,V(i,maxSecond)+0.01,cols(1,i), "interpreter", "none");
+  text(V(i,1)+0.01,V(i,2)+0.01,cols(1,i), "interpreter", "none");
 endfor
 
 
 #getting limits of each axis (to avoid figure resizing)
-minX = inf;
-maxX = -inf;
+min1 = inf;
+max1 = -inf;
 
-minY = inf;
-maxY = -inf;
+min2 = inf;
+max2 = -inf;
+
+min3 = inf;
+max3 = -inf;
+
+min4 = inf;
+max4 = -inf;
 
 for i=1:rows(finalValues)
-  if finalValues(i,maxFirst) > maxX
-    maxX = finalValues(i,maxFirst);
+  if finalValues(i,1) > max1
+    max1 = finalValues(i,1);
   endif    
-  if finalValues(i,maxFirst) < minX
-    minX = finalValues(i,maxFirst);
+  if finalValues(i,1) < min1
+    min1 = finalValues(i,1);
   endif
   
-   if finalValues(i,maxSecond) > maxY
-    maxY = finalValues(i,maxSecond);
+   if finalValues(i,2) > max2
+    max2 = finalValues(i,2);
   endif    
-  if finalValues(i,maxSecond) < minY
-    minY = finalValues(i,maxSecond);
+  if finalValues(i,2) < min2
+    min2 = finalValues(i,2);
+  endif
+  
+   if finalValues(i,3) > max3
+    max3 = finalValues(i,3);
+  endif    
+  if finalValues(i,3) < min3
+    min3 = finalValues(i,3);
+  endif
+  
+   if finalValues(i,4) > max4
+    max4 = finalValues(i,4);
+  endif    
+  if finalValues(i,4) < min4
+    min4 = finalValues(i,4);
   endif
 endfor
 
-disp(maxX)
-disp(minX)
-disp(maxY)
-disp(minY)
-
+disp(max1);
+disp(min1);
+disp(max2);
+disp(min2);
+disp(max3);
+disp(min3);
+disp(max4);
+disp(min4);
 
 #drawing with main axis
 
-figure(9)
-axis([minX;maxX;minY;maxY],"equal")
+figure(10)
+axis([min1;max1;min2;max2],"equal")
 for i=1:rows(finalValues)
-  text(finalValues(i,maxFirst),finalValues(i,maxSecond),lines(i), "interpreter", "none");
+  text(finalValues(i,1),finalValues(i,2),lines(i), "interpreter", "none");
+endfor
+xlabel(strcat("factor1 :",num2str(percentInfo(1))," %"));
+ylabel(strcat("factor2 :",num2str(percentInfo(2))," %"));
+#PAS METTRE AUTANT DE CHIFFRE APRES LA VIRGULE
+
+#drawing with 3rd and 4th axis
+
+figure(11)
+axis([min3;max3;min4;max4],"equal")
+for i=1:rows(finalValues)
+  text(finalValues(i,3),finalValues(i,4),lines(i), "interpreter", "none");
 endfor
-
-xlabel(strcat("factor1 :",num2str(percentInfo(maxFirst))," %"));
-ylabel(strcat("factor2 :",num2str(percentInfo(maxSecond))," %"));
+
+xlabel(strcat("factor3 :",num2str(percentInfo(3))," %"));
+ylabel(strcat("factor4 :",num2str(percentInfo(4))," %"));
+#PAS METTRE AUTANT DE CHIFFRE APRES LA VIRGULE
