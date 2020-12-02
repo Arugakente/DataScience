@@ -63,7 +63,7 @@ for i=1:numel(files)
   linkFrom = str2num(substr(files{i},rindex(files{i},slash) + 5, rindex(files{i},".") - (rindex(files{i},slash) + 5)));
   
   for j=1:numel(currentFile)
-    disp(strcat("file: ",num2str(i),slash,num2str(numel(files))," | word: ",num2str(j),slash,num2str(numel(currentFile))))
+    #disp(strcat("file: ",num2str(i),slash,num2str(numel(files))," | word: ",num2str(j),slash,num2str(numel(currentFile))))
     currentWord = currentFile{j};
     
     if isempty(regexp(currentWord,"linkTo:.*")) == 0 %Link processing
