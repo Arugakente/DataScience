@@ -116,8 +116,8 @@ disp(E);
 #bar(diag(D));
 figure(7);
 bar(percentInfo);
+
 figure(8);
-hold on
 bar(cumulInfo);
 
 finalValues = Xnorm*E;
