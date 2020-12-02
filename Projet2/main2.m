@@ -96,6 +96,7 @@ for i=1:round(dim/2)
 endfor
 
 V = E * ((D/rows(X)).^(1/2));
+
 disp(columns(Xnorm))
 
 infoTot = sum(diag(D));
@@ -120,7 +121,7 @@ bar(percentInfo);
 figure(8);
 bar(cumulInfo);
 
-finalValues = Xnorm*E;
+finalValues = Xnorm*E*D^-(1/2);
 
 
 #{
@@ -164,11 +165,28 @@ y=0;
 r1=1;
 drawCircle(x,y,r1);
 hold on
-quiver(zeros(1,rows(E)),zeros(1,rows(E)),V(:,1),V(:,2),'AutoScale','off');
+quiver(zeros(1,rows(V)),zeros(1,rows(V)),V(:,1),V(:,2),'AutoScale','off');
+set(gca, 'DataAspectRatio', [1 1 1])
 
 for i=1:columns(finalValues)
   text(V(i,1)+0.01,V(i,2)+0.01,cols(1,i), "interpreter", "none");
 endfor
+
+#drawing of the correlation circle
+figure(10)
+
+x=0;
+y=0;
+r1=1;
+drawCircle(x,y,r1);
+hold on
+quiver(zeros(1,rows(V)),zeros(1,rows(V)),V(:,3),V(:,4),'AutoScale','off');
+set(gca, 'DataAspectRatio', [1 1 1])
+
+for i=1:columns(finalValues)
+  text(V(i,3)+0.01,V(i,4)+0.01,cols(1,i), "interpreter", "none");
+endfor
+
 
 
 #getting limits of each axis (to avoid figure resizing)
@@ -225,23 +243,23 @@ disp(min4);
 
 #drawing with main axis
 
-figure(10)
-axis([min1;max1;min2;max2],"equal")
+figure(11)
+axis([min1;max1;min2;max2])
 for i=1:rows(finalValues)
   text(finalValues(i,1),finalValues(i,2),lines(i), "interpreter", "none");
 endfor
-xlabel(strcat("factor1 :",num2str(percentInfo(1))," %"));
-ylabel(strcat("factor2 :",num2str(percentInfo(2))," %"));
+xlabel(strcat("factor1 :",num2str(percentInfo(1),4)," %"));
+ylabel(strcat("factor2 :",num2str(percentInfo(2),4)," %"));
 #PAS METTRE AUTANT DE CHIFFRE APRES LA VIRGULE
 
 #drawing with 3rd and 4th axis
 
-figure(11)
-axis([min3;max3;min4;max4],"equal")
+figure(12)
+axis([min3;max3;min4;max4])
 for i=1:rows(finalValues)
   text(finalValues(i,3),finalValues(i,4),lines(i), "interpreter", "none");
 endfor
 
-xlabel(strcat("factor3 :",num2str(percentInfo(3))," %"));
-ylabel(strcat("factor4 :",num2str(percentInfo(4))," %"));
+xlabel(strcat("factor3 :",num2str(percentInfo(3),3)," %"));
+ylabel(strcat("factor4 :",num2str(percentInfo(4),3)," %"));
 #PAS METTRE AUTANT DE CHIFFRE APRES LA VIRGULE
