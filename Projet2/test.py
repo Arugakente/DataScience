@@ -5,13 +5,13 @@ import seaborn as sns
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pnd.read_csv("./Dataset/dataset.csv",header=0,index_col=0)
+df = pnd.read_csv("./Dataset/datasetCleaned.csv",header=0,index_col=0)
 #dimension
 print(df.shape) # (18, 6)
 #nombre d'observations
-n = df.shape[0]
+n = df.shape[1]
 #nombre de variables
-p = df.shape[1]
+p = df.shape[0]
 #affichage des données
 print(df)
 
@@ -48,8 +48,6 @@ plt.show()
 
 #positionnement des individus dans le premier plan
 fig, axes = plt.subplots(figsize=(12,12))
-axes.set_xlim(-6,6) #même limites en abscisse
-axes.set_ylim(-6,6) #et en ordonnée
 #placement des étiquettes des observations
 for i in range(n):
     plt.annotate(df.index[i],(coord[i,0],coord[i,1]))
@@ -67,7 +65,7 @@ print(eigval)
 sqrt_eigval = np.sqrt(eigval)
 
 #corrélation des variables avec les axes
-corvar = np.zeros((p,p))
+corvar = np.zeros((n,n))
 for k in range(n):
  corvar[:,k] = acp.components_[k,:] * sqrt_eigval[k]
 
@@ -79,7 +77,7 @@ fig, axes = plt.subplots(figsize=(8,8))
 axes.set_xlim(-1,1)
 axes.set_ylim(-1,1)
 #affichage des étiquettes (noms des variables)
-for j in range(p):
+for j in range(n):
     plt.annotate(df.columns[j],(corvar[j,0],corvar[j,1]))
 
 #ajouter les axes
