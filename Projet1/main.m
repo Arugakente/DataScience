@@ -1,6 +1,6 @@
 #Program Parameters
 multiCount = false;
-keywordCount = true;
+keywordCount = false;
 a = 0.85;
 epsilon = 0.001;
 
@@ -263,7 +263,8 @@ do
     disp("Search results:");
     for i=1:numel(ranking)
       if(ranking(i) != 0)
-        disp(strcat(num2str(i),": ",labels{ranking(i)}))
+        disp(strcat(num2str(i),": ",labels{ranking(i)}));
+        #disp(strcat(" | rank=",num2str(n(i)), " | keywordMatch=", num2str(keywordMatch(i))));
       endif
     endfor
   endif
